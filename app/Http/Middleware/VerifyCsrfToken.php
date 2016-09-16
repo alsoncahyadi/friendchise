@@ -18,5 +18,11 @@ class VerifyCsrfToken extends BaseVerifier
         'franchisee/login',
         'franchisee/{franchisee}/update',
         'franchisee/{franchisee}/edit',
+        
+        'schedule',
+        'schedule/new',
+        'schedule/login',
+        'schedule/{schedule}/update',
+        'schedule/{schedule}/edit',
     ];
 }

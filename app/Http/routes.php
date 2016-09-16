@@ -65,24 +65,16 @@ Route::get('secretPage', [
 
 Route::get('showSecret', 'SecretController@showSecret');
 
-//Untuk return data user
-/*
-Route::get('franchisee', function() {
-	//$franchiseeArray = ['JakSel', 'JakBar', 'JakPus', 'JakUt', 'JakTim'];
-	$franchiseeArray = array('JakSel', 'JakBar', 'JakPus', 'JakUt', 'JakTim');
-	//return view('franchisee/index', compact('franchiseeArray'));
-	//return view('franchisee/index', ['franchisee' => $franchiseeArray]);
-
-	//Jadi yang 'franchiseeInput' itu adalah nama variabel di index.blade.php
-	//Sedangkan, $franchiseeArray adalah variabel yang kita input ke 'franchiseeArray'
-	return view('franchisee/index') -> with('franchiseeInput', $franchiseeArray);
-});
-*/
-
 //Keempat route berikut urutannya jgn sampai tertukar
 
 //Menampilkan data mitra
 Route::get('franchisee', 'FranchiseeController@index');
+
+//Menampilkan data mitra
+Route::get('schedule', 'ScheduleController@index');
+
+//Menampilkan data penjadwalan
+Route::get('schedule/create', 'ScheduleController@create');
 
 //Membuat data mitra
 Route::get('franchisee/create', 'FranchiseeController@create');
@@ -90,6 +82,8 @@ Route::get('franchisee/create', 'FranchiseeController@create');
 //Route untuk nerima data akun baru
 //Route::post('franchisee/new', 'FranchiseeController@store');
 Route::post('franchisee', 'FranchiseeController@store');
+
+Route::post('schedule', 'ScheduleController@store');
 
 //Untuk Login
 Route::get('franchisee/login', 'FranchiseeController@loginGet');
@@ -155,6 +149,20 @@ Route::get('franchisee/sampledata', function() {
 		],
 	]);
 });
+
+//Untuk return data user
+/*
+Route::get('franchisee', function() {
+	//$franchiseeArray = ['JakSel', 'JakBar', 'JakPus', 'JakUt', 'JakTim'];
+	$franchiseeArray = array('JakSel', 'JakBar', 'JakPus', 'JakUt', 'JakTim');
+	//return view('franchisee/index', compact('franchiseeArray'));
+	//return view('franchisee/index', ['franchisee' => $franchiseeArray]);
+
+	//Jadi yang 'franchiseeInput' itu adalah nama variabel di index.blade.php
+	//Sedangkan, $franchiseeArray adalah variabel yang kita input ke 'franchiseeArray'
+	return view('franchisee/index') -> with('franchiseeInput', $franchiseeArray);
+});
+*/
 
 ?>
 
