@@ -11,7 +11,8 @@ use App\Schedule;
 class ScheduleController extends Controller
 {
     public function index() {
-        $scheduleList = Schedule::all();
+        //$scheduleList = Schedule::all()->sort('tanggal');
+        $scheduleList = Schedule::orderBy('tanggal', 'asc') -> paginate(5);
 
         $jumlahSiswa = $scheduleList -> count();
         $inputData = array (
