@@ -20,6 +20,20 @@ Route::get('/', function () {
 });
 */
 
+Route::get('add', function() {
+	return view('add');
+});
+
+Route::get('vendor', function() {
+	return view('vendor');
+});
+
+/*
+Route::get('add2', function() {
+	return view('add');
+});
+*/
+
 //Route yang ngeget request winner trus ngereturn html page yang isinya string doang
 Route::get('winner', function () {
     return 'Selamat, tim Bakwan telah memenangkan Compfest Hackathon 2016';
