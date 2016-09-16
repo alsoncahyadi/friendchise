@@ -1,7 +1,7 @@
 @extends('template')
 
 @section('main')
-    <div id='franchisee'>
+    <div id='schedule'>
     
     <!-- PRELOADER -->
     <img id="preloader" src="<?php public_path() ?>/images/preloader.gif" alt="" />
@@ -100,11 +100,11 @@
                                 <form method = "POST" action = "{{ url('schedule') }}">
                                     <div class ="form-group">
                                             <h3>Nama Mitra</h3>
-                                            <input type="text" name="nama" id="nama" class = "form-control margbot30">
+                                            <input type="text" name="nama" id="nama" class = "form-control margbot30" placeholder="Dedi Supardi">
                                             <h3>Tanggal</h3>
-                                            <input type="text" name="tanggal" id="tanggal" class = "form-control margbot30">
+                                            <input type="text" name="tanggal" id="tanggal" class = "form-control margbot30" placeholder="TTTT-BB-HH">
                                             <h3>Jumlah Kirim</h3>
-                                            <input type="number" name="jumlah" id="jumlah" class = "form-control margbot30" min="0" max="500">
+                                            <input type="number" name="jumlahkirim" id="jumlahkirim" class = "form-control margbot30" min="0" max="500" placeholder="100">
                                     </div>
                                     <div class="form-group">
                                         <input class = "contact_btn" type="submit" value="Buat Jadwal">

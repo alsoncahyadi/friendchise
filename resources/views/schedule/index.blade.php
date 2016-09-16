@@ -29,6 +29,14 @@
 								<div class="box-button">
 									{{ link_to('schedule/'.$item->id . '/edit', 'Ubah', ['class'=>'btn btn-success btn-sm']) }} 
 								</div>
+								<div class="box-button">
+									{!! Form::open(['method' => 'DELETE', 'action' => ['ScheduleController@delete', $item->id] ]) !!}
+
+									{!! Form::submit('Hapus', ['class' => 'btn btn-danger btn-sm']) !!}
+
+									{!! Form::close() !!}
+
+								</div>
 							</td>
 						</tr>
 					<?php endforeach ?>

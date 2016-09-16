@@ -109,11 +109,20 @@ Route::get('franchisee/user/{franchisee}', ['uses' =>'FranchiseeController@userd
 //new atau create bakal dianggap id, padahal ngk ada
 Route::get('franchisee/{franchisee}', 'FranchiseeController@showDetail');
 
+//Show detail schedule
+Route::get('schedule/{scedule}', 'ScheduleController@showDetail');
+
 //Untuk edit data franchisee after clicking button
 Route::get('franchisee/{franchisee}/edit', 'FranchiseeController@edit');
 
+//Untuk edit data Schedule after clicking button
+Route::get('schedule/{schedule}/edit', 'ScheduleController@edit');
+
 //Untuk post edit/patch button
 Route::patch('franchisee/{franchisee}', 'FranchiseeController@update');
+
+//Untuk post edit/patch button schedule
+Route::patch('schedule/{schedule}', 'ScheduleController@update');
 
 //Untuk tambahkurang penjualan
 Route::patch('franchisee/user/{franchisee}/updatepenjualan', 'FranchiseeController@updatePenjualan');
@@ -125,6 +134,9 @@ Route::patch('franchisee/user/{franchisee}/updatestok', 'FranchiseeController@up
 //Kalo misal di route ini belom didefinisiin 'FranchiseController@destroy',
 //maka ngk bakal dikenali di index.blade.php
 Route::delete('franchisee/{franchisee}', 'FranchiseeController@delete');
+
+//Delete record schedule
+Route::delete('schedule/{schedule}', 'ScheduleController@delete');
 
 //Route sementara untuk nambahin row awal
 Route::get('franchisee/sampledata', function() {
