@@ -105,7 +105,7 @@
 												<input type="number" max ="500" min="0" name="jumlah" id="jumlah" class = "form-control">
 										</div>
 										<div class="col-lg-2">
-												<button id ="tambah" class="contact_btn" onclick="" >Tambah</button>
+												<button id ="tambah" class="contact_btn" onclick="" action="{{ url('franchisee/user/alsoncahyadi') }}" >Tambah</button>
 										</div>
 										<div class="col-lg-2">
 												<button id ="kurang" class="contact_btn" onclick="" >Kurangi</button>

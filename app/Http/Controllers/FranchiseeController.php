@@ -135,5 +135,9 @@ class FranchiseeController extends Controller
 
     public function loginGet(Request $req) {
         return view('franchisee/login');
-    }    
+    }
+
+    public function userdashboard($username) {
+        return view('franchisee/dashboarduser');
+    }
 }
