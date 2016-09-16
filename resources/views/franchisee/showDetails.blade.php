@@ -66,7 +66,13 @@
 					Penjualan Tahu
 				</th>
 				<td>
-					{{ $franchiseeInput->jualtahu }}
+					<?php
+						$unserializedJualtahu = unserialize($franchiseeInput->jualtahu);
+						foreach ($unserializedJualtahu as $tanggal => $jumlah) {
+							echo '<strong>(' . $tanggal . '): </strong>' . $jumlah . '<br>';
+						}
+					?>
+					<!-- {{ $franchiseeInput->jualtahu }} -->
 				</td>
 			</tr>
 

@@ -24,7 +24,7 @@
             </div>
 
             <div class="form-group" >
-                {!! Form::label('password', 'Password', ['class' => 'control-label']) !!}
+                {!! Form::label('password', 'Password', array('class' => 'control-label', 'type' => 'password')) !!}
                 {!! Form::text('password', null, ['class' => 'form-control']) !!}
             </div>
 

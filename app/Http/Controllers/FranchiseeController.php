@@ -113,7 +113,7 @@ class FranchiseeController extends Controller
         //Ubah data Penjualan Tahu yang tadinya masih serialized jadi array unpack
         $unpackserialize = unserialize($franchisee['jualtahu']);
         //ambil untuk today (18 sept 2016)
-        $franchisee['jualtahu'] = $unpackserialize['18-09-2016'];
+        //$franchisee['jualtahu'] = $unpackserialize['18-09-2016'];
         $inputData = array (
             'franchiseeInput' => $franchisee
         );
@@ -123,18 +123,33 @@ class FranchiseeController extends Controller
     public function loginPost(Request $req) {
         $franchiseeList = Franchisees::all();
         $input = $req->all();
+        $errMsg = '';
         foreach ($franchiseeList as $franchisee) {
             if ($franchisee['username'] == $input['username']) {
                 if ($franchisee['password'] == $input['password']) {
-                    return view('franchisee/loginsuccess');
+                    $inputData = array (
+                        'franchiseeInput' => $frenchisee,
+                    );
+                    return view('franchisee/dashboarduser') -> with($inputData);
+                } else {
+                    $errMsg = "Username dan Password tidak cocok!";
                 }
             }
         }
-        return view('franchisee/login');
+        if ($errMsg == '') {
+            $errMsg = 'Username tidak ditemukan!';
+        }
+        $inputMsg = array (
+            'errMsg' => "Login failed! " . $errMsg,
+        );
+        return view('franchisee/login') -> with($inputMsg);
     }
 
     public function loginGet(Request $req) {
-        return view('franchisee/login');
+        $inputMsg = array (
+            'errMsg' => '',
+        );
+        return view('franchisee/login') -> with($inputMsg);
     }
 
     public function userdashboard($id) {
@@ -155,7 +170,11 @@ class FranchiseeController extends Controller
         //Ambil array jual tahu
         $arrayJualTahu = unserialize($franchisee['jualtahu']);
         //Tamah/kurang
-        $arrayJualTahu['18-09-2016'] = $arrayJualTahu['18-09-2016'] + $req->jumlah;
+        if ($req->date == '') {
+            $req->date = date('d-m-Y');
+        }
+
+        $arrayJualTahu[$req->date] += $req->jumlah;
         //Pack
         $packing = serialize($arrayJualTahu);
         //Update
@@ -164,7 +183,7 @@ class FranchiseeController extends Controller
         $franchisee->save();
 
         //Dishownya yang unserialized
-        $franchisee['jualtahu'] = $arrayJualTahu['18-09-2016'];
+        //$franchisee['jualtahu'] = $arrayJualTahu[$req->date];
         $inputData = array (
             'franchiseeInput' => $franchisee
         );
@@ -179,6 +198,8 @@ class FranchiseeController extends Controller
         $franchisee['stoktahu'] += $req->jumlah;
         $franchisee->save();
 
+        //Dishownya yang unserialized
+        //$franchisee['jualtahu'] = $arrayJualTahu[$req->date];
         $inputData = array (
             'franchiseeInput' => $franchisee
         );

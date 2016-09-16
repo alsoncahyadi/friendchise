@@ -110,7 +110,7 @@
                                             <h3>Username</h3>
                                             <input type="text" name="username" id="username" class = "form-control margbot30">
                                             <h3>Password</h3>
-                                            <input type="password" name="pass" id="pass" class = "form-control margbot30">
+                                            <input type="password" name="password" id="pass" class = "form-control margbot30">
                                     </div>
                                     <div class="form-group">
                                         <input class = "contact_btn" type="submit" value="Buat Akun">

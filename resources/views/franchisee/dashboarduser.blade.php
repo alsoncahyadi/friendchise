@@ -100,12 +100,16 @@
 								<div class ="form-group">
 									<h2>Penjualan Tahu Jeletot</h2>
 									<div class="row  margbot30">
+										<div class="col-lg-4">									
+												<input type="number" placeholder="TAMBAH PENJUALAN contoh: 5" max ="500" min="-500" name="jumlah" id="jumlah" class = "form-control">
+										</div>
 										<div class="col-lg-4">
-												<input type="number" max ="500" min="-500" name="jumlah" id="jumlah" class = "form-control">
+												<input type="text" placeholder="TANGGAL contoh: 18-09-2016" maxlength="10" name="date" id="date" class = "form-control">
 										</div>
 										<div class="col-lg-2">
 												<button id ="updatejual" class="contact_btn" onclick="" >Update</button>
 										</div>
+										
 									</div>
 								</div>
 							{!! Form::close() !!}
@@ -114,7 +118,7 @@
 									<h2>Stok Tahu Jeletot</h2>
 									<div class="row  margbot30">
 										<div class="col-lg-4">
-												<input type="number" max ="500" min="-500" name="jumlah" id="jumlah" class = "form-control">
+												<input type="number" placeholder="TAMBAH STOK contoh: 5" max ="500" min="-500" name="jumlah" id="jumlah" class = "form-control">
 										</div>
 										<div class="col-lg-2">
 												<button id ="updatestok" class="contact_btn" onclick="" >Update</button>

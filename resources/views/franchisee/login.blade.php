@@ -103,6 +103,7 @@
                                             <input type="text" name="username" id="username" class = "form-control margbot30">
                                             <h3>Password</h3>
                                             <input type="password" name="password" id="pass" class = "form-control margbot30">
+                                            <p style="color:red !important;"><?php echo $errMsg ?><p>
                                     </div>
                                     <div class="form-group">
                                         <input class = "contact_btn" type="submit" value="Log in">
