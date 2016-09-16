@@ -97,6 +97,12 @@ Route::get('franchisee/successlogin', 'FranchiseeController@loginGet');
 //Success Login
 Route::post('franchisee/successlogin', 'FranchiseeController@loginPost');
 
+// Halaman update stok dan penjualan 
+Route::get('franchisee/user/{franchisee}', ['uses' =>'FranchiseeController@userdashboard', 'as'=>'userdashboard']);
+
+//Kurang Tambah
+//Route::post('franchisee/user/{username}', ['uses' =>'FranchiseeController@userdashboard', 'as'=>'userdashboard']);
+
 //Untuk nampilin detail
 // Biasanya kalo mau ngasitau itu variabel pake -> { }
 //Kalo ini ditaro di atas franchisee/create atau new bakal masalah karena 
@@ -108,6 +114,12 @@ Route::get('franchisee/{franchisee}/edit', 'FranchiseeController@edit');
 
 //Untuk post edit/patch button
 Route::patch('franchisee/{franchisee}', 'FranchiseeController@update');
+
+//Untuk tambahkurang penjualan
+Route::patch('franchisee/user/{franchisee}/updatepenjualan', 'FranchiseeController@updatePenjualan');
+
+//Untuk tambahkurang stok
+Route::patch('franchisee/user/{franchisee}/updatestok', 'FranchiseeController@updateStok');
 
 //Untuk delete record mitra
 //Kalo misal di route ini belom didefinisiin 'FranchiseController@destroy',

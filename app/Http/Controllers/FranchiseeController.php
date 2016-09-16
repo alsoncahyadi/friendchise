@@ -137,7 +137,51 @@ class FranchiseeController extends Controller
         return view('franchisee/login');
     }
 
-    public function userdashboard($username) {
-        return view('franchisee/dashboarduser');
+    public function userdashboard($id) {
+        $franchisee = Franchisees::findOrFail($id);
+        //Ubah data Penjualan Tahu yang tadinya masih serialized jadi array unpack
+        $unpackserialize = unserialize($franchisee['jualtahu']);
+        //ambil untuk today (18 sept 2016)
+        $franchisee['jualtahu'] = $unpackserialize['18-09-2016'];
+        $inputData = array (
+            'franchiseeInput' => $franchisee
+        );
+        return view('franchisee/dashboarduser') -> with($inputData);   
+    }
+
+    public function updatePenjualan($id, Request $req) {
+        //Ambil record
+        $franchisee = Franchisees::findOrFail($id);
+        //Ambil array jual tahu
+        $arrayJualTahu = unserialize($franchisee['jualtahu']);
+        //Tamah/kurang
+        $arrayJualTahu['18-09-2016'] = $arrayJualTahu['18-09-2016'] + $req->jumlah;
+        //Pack
+        $packing = serialize($arrayJualTahu);
+        //Update
+        $franchisee['jualtahu'] = $packing;
+        $franchisee['stoktahu'] -= $req->jumlah;
+        $franchisee->save();
+
+        //Dishownya yang unserialized
+        $franchisee['jualtahu'] = $arrayJualTahu['18-09-2016'];
+        $inputData = array (
+            'franchiseeInput' => $franchisee
+        );
+        return view('franchisee/showDetails') -> with($inputData);
+    }
+
+    public function updateStok($id, Request $req) {
+        //Ambil record
+        $franchisee = Franchisees::findOrFail($id);
+  
+        //Update
+        $franchisee['stoktahu'] += $req->jumlah;
+        $franchisee->save();
+
+        $inputData = array (
+            'franchiseeInput' => $franchisee
+        );
+        return view('franchisee/showDetails') -> with($inputData);
     }
 }

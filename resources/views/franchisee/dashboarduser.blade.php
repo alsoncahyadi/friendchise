@@ -95,12 +95,41 @@
 						
 						<!-- SINGLE BLOG POST -->
 						<div class="single_blog_post clearfix" data-animated="fadeInUp">
-							
+							<div class="single_blog_post_content">
+							{!! Form::model ($franchiseeInput, ['method' => 'PATCH', 'action' => ['FranchiseeController@updatePenjualan', $franchiseeInput->id]]) !!}
+								<div class ="form-group">
+									<h2>Penjualan Tahu Jeletot</h2>
+									<div class="row  margbot30">
+										<div class="col-lg-4">
+												<input type="number" max ="500" min="-500" name="jumlah" id="jumlah" class = "form-control">
+										</div>
+										<div class="col-lg-2">
+												<button id ="updatejual" class="contact_btn" onclick="" >Update</button>
+										</div>
+									</div>
+								</div>
+							{!! Form::close() !!}
+							{!! Form::model ($franchiseeInput, ['method' => 'PATCH', 'action' => ['FranchiseeController@updateStok', $franchiseeInput->id]]) !!}
+								<div class ="form-group">
+									<h2>Stok Tahu Jeletot</h2>
+									<div class="row  margbot30">
+										<div class="col-lg-4">
+												<input type="number" max ="500" min="-500" name="jumlah" id="jumlah" class = "form-control">
+										</div>
+										<div class="col-lg-2">
+												<button id ="updatestok" class="contact_btn" onclick="" >Update</button>
+										</div>
+										
+									</div>
+								</div>
+							{!! Form::close() !!}
+							</div>
+							<!--
 							<div class="single_blog_post_content">
 								<div class ="form-group">
 									<h2>Penjualan Tahu Jeletot</h2>
 									<div class="row  margbot30">
-										<!-- Input Jumlah-->
+										
 										<div class="col-lg-4">
 												<input type="number" max ="500" min="0" name="jumlah" id="jumlah" class = "form-control">
 										</div>
@@ -116,7 +145,7 @@
 								<div class ="form-group">
 									<h2>Stok Tahu Jeletot</h2>
 									<div class="row  margbot30">
-										<!-- Input Jumlah-->
+										
 										<div class="col-lg-4">
 												<input type="number" max ="500" min="0" name="jumlah" id="jumlah" class = "form-control">
 										</div>
@@ -130,7 +159,7 @@
 									</div>
 								</div>
 							</div>
-							
+							-->							
 						</div><!-- //SINGLE BLOG POST -->
 						
 						
