@@ -40,7 +40,7 @@
 					
 					<!-- LOGIN FORM -->
 					<div id="login-form" class="pull-right">
-						<form method="get" action="#">
+						<form method="POST" action = "{{ url('login') }}">
 							<input type="text" name="username" value="Username" onFocus="if (this.value == 'Username') this.value = '';" onBlur="if (this.value == '') this.value = 'Username';" />
 							<input type="password" name="password" value="password" onFocus="if (this.value == 'password') this.value = '';" onBlur="if (this.value == '') this.value = 'password';" />
 							<input type="submit" style="position: absolute; left: -9999px; width: 1px; height: 1px;" tabindex="-1" />

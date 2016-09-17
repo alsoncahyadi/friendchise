@@ -88,10 +88,6 @@
                             
                         </div><!-- //SINGLE BLOG POST -->
                         
-                        
-                        
-                        
-                        
                     </div><!-- //BLOG BLOCK -->
                     <div class="col-lg-2 col-md-2"></div>
     
