@@ -1,7 +1,8 @@
 <style>
   #map-canvas{
-    width: 100%;
-    height: 100%;
+    width: 80%;
+    height: 80%;
+    text-align: center;
   }
 </style>
 
@@ -87,7 +88,7 @@
         document.getElementById('submit').addEventListener('click', function() {
           var address = document.getElementById('address');
           console.log(address.geometry);
-          //geocodeAddress(geocoder);
+          geocodeAddress(geocoder);
         });
       }
 
