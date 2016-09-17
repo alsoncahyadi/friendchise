@@ -144,9 +144,9 @@
 											Stok Tahu
 										</th>
 										<td>
-											<?php
+											<?php 
 												echo '<br></br>';
-												echo '<strong>' . $franchiseeStok . '</strong>';
+												echo '<strong>' . $franchiseeInput['stoktahu'] . '</strong>';
 											?>
 										</td>
 									</div>

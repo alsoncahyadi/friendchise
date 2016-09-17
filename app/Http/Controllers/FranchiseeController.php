@@ -198,7 +198,7 @@ class FranchiseeController extends Controller
             if ($franchisee['username'] == $input['username']) {
                 if ($franchisee['password'] == $input['password']) {
                     $inputData = array (
-                        'franchiseeInput' => $franchisee,
+                        'franchiseeInput' => $franchisee
                     );
                     return view('franchisee/dashboarduser') -> with($inputData);
                 } else {
@@ -211,6 +211,7 @@ class FranchiseeController extends Controller
         }
         $inputMsg = array (
             'errMsg' => "Login failed! " . $errMsg,
+            
         );
         return view('franchisee/login') -> with($inputMsg);
     }
