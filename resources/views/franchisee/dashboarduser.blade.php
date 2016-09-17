@@ -132,11 +132,13 @@
 										<br></br>
 										<td>
 											<?php
+											if (!empty($franchiseeInput->jualtahu)) {
 												$unserializedJualtahu = unserialize($franchiseeInput->jualtahu);
 												krsort($unserializedJualtahu);
 												foreach ($unserializedJualtahu as $tanggal => $jumlah) {
 													echo '<strong>(' . $tanggal . '): </strong>' . $jumlah . '<br>';
 												}
+											}
 											?>
 										</td>
 										<?php echo '<br></br>';?>
