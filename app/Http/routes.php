@@ -201,9 +201,12 @@ Route::get('franchisee/sampledata', function() {
 });
 
 //Route untuk graph
-Route::get('testchart', function() {
+/*Route::get('testchart', function() {
 	return view('testchart');
-});
+});*/
+
+//Test lavachart
+Route::get('lava', "FranchiseeController@chartForJual");
 
 //Untuk return data user
 /*

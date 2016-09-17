@@ -1,19 +1,25 @@
-<div class="container-fluid">
-    <canvas id="BarChart" style="width:50%;"></canvas>
-</div>
 
-<div>
-	<h2>
-	TEST
-	</h2>
+<!--
+<div class="container-fluid">
+    <canvas id="RadarChart" style="width:50%;"></canvas>
 </div>
+-->
+
+<div id="sales-chart"></div>
 
 <?php
-    $data = array(
-        'Jan' => array(33),
-        'Feb' => array(32),
-        'Mar' => array(12)
-    );
+		$salesTable = \Lava::DataTable();
+
+        $salesTable->addDateColumn('Day of Month')->addNumberColumn('Sales');
+
+        foreach ($franchiseeInput as $key => $value) {
+        	$salesTable->addRow([
+              $key, $value
+            ]);	
+        }
+
+        $chart = \Lava::LineChart('MyStocks', $salesTable);
+
+        echo \Lava::render('LineChart', 'MyStocks', 'sales-chart');
 ?>
 
-{!! app()->chartbar->render("BarChart", $data) !!}

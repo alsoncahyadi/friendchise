@@ -9,6 +9,8 @@ use App\Franchisees;
 
 use View;
 
+use Khill\Lavacharts\Lavacharts;
+
 //require public_path() .'\..\vendor\autoload.php';
 
 //$lava = new Khill\Lavacharts\Lavacharts;
@@ -138,10 +140,10 @@ class FranchiseeController extends Controller
             ->groupBy(Franchisees::raw("year(created_at)"))
             ->get()->toArray();
         */
-        $viewer = Franchisees::all()->toArray();
+        //$viewer = Franchisees::all()->toArray();
         //Test bikin array
 
-        $viewer = array_column($viewer, 'count');
+        //$viewer = array_column($viewer, 'count');
         
         /*
         $click = Click::select(DB::raw("SUM(numberofclick) as count"))
@@ -150,10 +152,38 @@ class FranchiseeController extends Controller
             ->get()->toArray();
         $click = array_column($click, 'count');
         */
-        
+        /*
         return view('chartjs')
                 ->with('viewer',json_encode($viewer,JSON_NUMERIC_CHECK));
                 //->with('click',json_encode($click,JSON_NUMERIC_CHECK));
+        */
+
+                /*
+        $stocksTable = \Lava::DataTable();
+
+        $stocksTable->addDateColumn('Day of Month')
+                    ->addNumberColumn('Projected')
+                    ->addNumberColumn('Official');
+
+        // Random Data For Example
+        for ($a = 1; $a < 30; $a++) {
+            $stocksTable->addRow([
+              '2015-10-' . $a, rand(800,1000), rand(800,1000)
+            ]);
+        }
+
+        $chart = \Lava::LineChart('MyStocks', $stocksTable);
+        */
+
+        $franchisee = Franchisees::findOrFail(1);
+        $unserializedJualtahu = unserialize($franchisee->jualtahu);
+        krsort($unserializedJualtahu);
+
+        $inputData = array(
+            'franchiseeInput' => $unserializedJualtahu
+        );
+
+        return view('testchart') -> with($inputData);
     }
 
     public function loginPost(Request $req) {
