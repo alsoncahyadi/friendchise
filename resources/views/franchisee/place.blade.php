@@ -73,11 +73,36 @@
 
         infowindow = new google.maps.InfoWindow();
         var service = new google.maps.places.PlacesService(map);
+
         service.nearbySearch({
           //location: pyrmont,
           location: position,
-          radius: 1000,
-          type: ['store']
+          radius: 3000,
+          type: ['school']
+        }, callback);
+
+        service.nearbySearch({
+          location: position,
+          radius: 3000,
+          type: ['hospital']
+        }, callback);
+
+        service.nearbySearch({
+          location: position,
+          radius: 3000,
+          type: ['bus_station']
+        }, callback);
+
+        service.nearbySearch({
+          location: position,
+          radius: 3000,
+          type: ['gas_station']
+        }, callback);
+
+        service.nearbySearch({
+          location: position,
+          radius: 3000,
+          type: ['train_station']
         }, callback);
 
         var geocoder = new google.maps.Geocoder();
@@ -127,6 +152,8 @@
         //console.log(position);
         var address = document.getElementById('address').value;
         giveKeterangan();
+        stringPlace = address.toString();
+        console.log(stringPlace);
         geocoder.geocode({'address': address}, function(results, status) {
           if (status === 'OK') {
             console.log('status OK');
@@ -160,8 +187,6 @@
             if (franchisee[i]['kecamatan']==address.value.toString()) {
                 namaFranchiseeKecamatan.push(franchisee[i]['nama']);
                 alamatFranchiseeKecamatan.push(franchisee[i]['alamat']);
-            } else {
-                document.getElementById('keterangan').innerHTML = address.value.toString();
             }
           }
 

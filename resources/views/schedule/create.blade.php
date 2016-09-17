@@ -94,7 +94,13 @@
                                 <form method = "POST" action = "{{ url('schedule') }}">
                                     <div class ="form-group">
                                             <h3>Nama Mitra</h3>
+                                            @if(!empty($franchiseeInput))                                            
+                                                {!! Form::select('nama', $franchiseeInput, null, 
+                                                ['type' => 'text', 'class' => 'form-control margbot30', 'id' => 'nama', 'name' => 'nama',                                   'placeholder' => 'Pilih Mitra']) !!}
+                                            @else
                                             <input type="text" name="nama" id="nama" class = "form-control margbot30" placeholder="Dedi Supardi">
+                                            @endif
+                                            
                                             <h3>Tanggal</h3>
                                             <input type="text" name="tanggal" id="tanggal" class = "form-control margbot30" placeholder="TTTT-BB-HH">
                                             <h3>Jumlah Kirim</h3>

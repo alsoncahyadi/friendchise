@@ -8,6 +8,8 @@ use App\Http\Requests;
 
 use App\Schedule;
 
+use App\Franchisees;
+
 class ScheduleController extends Controller
 {
     public function index() {
@@ -23,7 +25,17 @@ class ScheduleController extends Controller
     }
 
     public function create(Request $req) {
-    	return view('schedule/create');
+        $franchisee = Franchisees::all();
+        $jumlahSiswa = $franchisee -> count();
+
+        $franchiseeList = array();
+        for ($i=0; $i<$jumlahSiswa; $i++) {
+            array_push($franchiseeList, $franchisee[$i]['nama']);
+        }
+        $inputData = array(
+            'franchiseeInput' => $franchiseeList
+        );
+    	return view('schedule/create') -> with ($inputData);
     }
 
     //Pokoknya tiap edit, update, sama delete itu kirim id dari form action-nya
