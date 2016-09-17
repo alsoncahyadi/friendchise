@@ -1,8 +1,7 @@
 <style>
   #map-canvas{
-    width: 80%;
-    height: 80%;
-    text-align: center;
+    width: 75%;
+    height: 75%;
   }
 </style>
 
@@ -127,6 +126,7 @@
         var geocoder = new google.maps.Geocoder();
         //console.log(position);
         var address = document.getElementById('address').value;
+        giveKeterangan();
         geocoder.geocode({'address': address}, function(results, status) {
           if (status === 'OK') {
             console.log('status OK');
@@ -152,14 +152,40 @@
         });
       }
 
+      function giveKeterangan() {
+          var namaFranchiseeKecamatan = [];
+          var alamatFranchiseeKecamatan = [];
+
+          for (var i=0; i<franchisee.length; i++) {
+            if (franchisee[i]['kecamatan']==address.value.toString()) {
+                namaFranchiseeKecamatan.push(franchisee[i]['nama']);
+                alamatFranchiseeKecamatan.push(franchisee[i]['alamat']);
+            } else {
+                document.getElementById('keterangan').innerHTML = address.value.toString();
+            }
+          }
+
+          document.getElementById('keterangan').innerHTML = "";
+          for (var i=0; i<namaFranchiseeKecamatan.length; i++) {
+            document.getElementById('keterangan').innerHTML += "<h2>";
+            document.getElementById('keterangan').innerHTML += namaFranchiseeKecamatan[i];
+            document.getElementById('keterangan').innerHTML += "   ";
+            document.getElementById('keterangan').innerHTML += alamatFranchiseeKecamatan[i];
+            document.getElementById('keterangan').innerHTML += "</h2>";
+          }
+      }
+
     </script>
   </head>
   <body>
     <div id="floating-panel">
       <input id="address" class="controls" type="text">
-      <input id="submit" type="button" value="Geocode">
+      <input id="submit" type="button" value="Cari Kecamatan">
     </div>
     <div id="map-canvas"></div>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCK4ZOyA74VQeqw3DV_EzeR_tXdPzeglo8&libraries=places&callback=initMap" async defer></script>
+    <div id="keterangan">
+  
+    </div>
   </body>
 </html>

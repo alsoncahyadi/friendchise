@@ -44,5 +44,6 @@ Route::patch('franchisee/{franchisee}/updatepenjualan', 'FranchiseeController@up
 Route::patch('franchisee/{franchisee}/updatestok', 'FranchiseeController@updateStok');
 
 //MAPS
+Route::get('franchisee/{franchisee}/rekomendasitempat', 'FranchiseeController@recommendation');
 
 ?>
