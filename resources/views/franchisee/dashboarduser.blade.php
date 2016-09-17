@@ -125,9 +125,37 @@
 										</div>
 										
 									</div>
+									<div class="row margbot30">
+										<th>
+											Penjualan Tahu
+										</th>
+										<br></br>
+										<td>
+											<?php
+												$unserializedJualtahu = unserialize($franchiseeInput->jualtahu);
+												krsort($unserializedJualtahu);
+												foreach ($unserializedJualtahu as $tanggal => $jumlah) {
+													echo '<strong>(' . $tanggal . '): </strong>' . $jumlah . '<br>';
+												}
+											?>
+										</td>
+										<?php echo '<br></br>';?>
+										<th>
+											Stok Tahu
+										</th>
+										<td>
+											<?php
+												echo '<br></br>';
+												echo '<strong>' . $franchiseeStok . '</strong>';
+											?>
+										</td>
+									</div>
 								</div>
+
 							{!! Form::close() !!}
+
 							</div>
+
 							<!--
 							<div class="single_blog_post_content">
 								<div class ="form-group">

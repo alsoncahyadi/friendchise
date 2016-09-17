@@ -237,6 +237,8 @@ class FranchiseeController extends Controller
     public function updatePenjualan($id, Request $req) {
         //Ambil record
         $franchisee = Franchisees::findOrFail($id);
+
+        $stok = $franchisee['stoktahu'];
         //Ambil array jual tahu
         $arrayJualTahu = unserialize($franchisee['jualtahu']);
         //Tamah/kurang
@@ -258,14 +260,16 @@ class FranchiseeController extends Controller
         //Dishownya yang unserialized
         //$franchisee['jualtahu'] = $arrayJualTahu[$req->date];
         $inputData = array (
-            'franchiseeInput' => $franchisee
+            'franchiseeInput' => $franchisee,
+            'franchiseeStok' => $stok
         );
-        return view('franchisee/showDetails') -> with($inputData);
+        return view('franchisee/dashboarduser') -> with($inputData);
     }
 
     public function updateStok($id, Request $req) {
         //Ambil record
         $franchisee = Franchisees::findOrFail($id);
+        $stok = $franchisee['stoktahu'];
 
         //Update
         $franchisee['stoktahu'] += $req->jumlah;
@@ -274,8 +278,9 @@ class FranchiseeController extends Controller
         //Dishownya yang unserialized
         //$franchisee['jualtahu'] = $arrayJualTahu[$req->date];
         $inputData = array (
-            'franchiseeInput' => $franchisee
+            'franchiseeInput' => $franchisee,
+            'franchiseeStok' => $stok
         );
-        return view('franchisee/showDetails') -> with($inputData);
+        return view('franchisee/dashboarduser') -> with($inputData);
     }
 }
