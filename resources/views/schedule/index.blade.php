@@ -49,11 +49,12 @@
               <!-- BREADCRUMBS -->
         <section class="breadcrumbs_block clearfix parallax margbot50">
             <div class="container center">
-                    <h2><b>Daftar</b> Jadwal </h2>
+                    <h2><b>Dashboard</b> Pusat </h2>
             </div>
         </section><!-- //BREADCRUMBS -->
             <!-- CONTAINER -->
             <div class="container">
+            <h1>Daftar Penjadwalan</h1>
                     <?php if (!empty($scheduleInput)):?>
                         <table class="table">
                             <thead>

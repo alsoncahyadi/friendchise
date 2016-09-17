@@ -67,15 +67,13 @@
 		<!-- BREADCRUMBS -->
 		<section class="breadcrumbs_block clearfix parallax">
 			<div class="container center">
-				<h2><b>DASH</b>BOARD</h2>
-				<p>Pengaturan pada waralaba anda</p>
+				<h2><b>DASHBOARD</b> MITRA</h2>
 			</div>
 		</section><!-- //BREADCRUMBS -->
 		
 		
 		<!-- BLOG -->
 		<section id="blog">
-			
 			<!-- CONTAINER -->
 			<div class="container">
 				

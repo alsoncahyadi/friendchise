@@ -49,13 +49,13 @@
               <!-- BREADCRUMBS -->
         <section class="breadcrumbs_block clearfix parallax margbot50">
             <div class="container center">
-                <h2><b>Daftar</b> Mitra</h2>
+                <h2><b>Dashboard</b> Pusat</h2>
             </div>
         </section><!-- //BREADCRUMBS -->
             <!-- CONTAINER -->
             <div class="container">
             
-           
+         <h1>Daftar Mitra</h1> 
 		<?php if (!empty($franchiseeInput)):?>
 			<table class="table margbot30">
 				<thead>
