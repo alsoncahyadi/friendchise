@@ -106,6 +106,7 @@
                                             <h3>Password</h3>
                                             <input type="password" name="password" id="pass" class = "form-control margbot30">
                                     </div>
+                                    <h5>Sudah memiliki akun? Silahkan melakukan <a href="/login">Login</a>.</h5><br />
                                     <div class="form-group">
                                         <input class = "contact_btn" type="submit" value="Buat Akun">
                                     </div>

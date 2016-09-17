@@ -80,6 +80,7 @@
                                             <input type="password" name="password" id="pass" class = "form-control margbot30">
                                             <p style="color:red !important;"><?php echo $errMsg ?><p>
                                     </div>
+                                    <h5>Belum memiliki akun? Silahkan melakukan <a href="/franchiser/1/create/franchisee">Sign Up</a>.</h5><br />
                                     <div class="form-group">
                                         <input class = "contact_btn" type="submit" value="Log in">
                                     </div>
