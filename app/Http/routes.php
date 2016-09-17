@@ -208,6 +208,21 @@ Route::get('test', function() {
 //Test lavachart
 Route::get('lava', "FranchiseeController@chartForJual");
 
+//Test place
+Route::get('testplace', function() {
+	return view('testplace');
+});
+
+//Place
+Route::get('place', function() {
+	return view('place');
+});
+
+//Place
+Route::get('geocode', function() {
+	return view('geocode');
+});
+
 //Untuk return data user
 /*
 Route::get('franchisee', function() {
