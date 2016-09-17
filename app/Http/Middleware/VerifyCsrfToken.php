@@ -13,6 +13,8 @@ class VerifyCsrfToken extends BaseVerifier
      */
     protected $except = [
         //
+        'login',
+        
         'franchisee',
     	'franchisee/new',
         'franchisee/login',

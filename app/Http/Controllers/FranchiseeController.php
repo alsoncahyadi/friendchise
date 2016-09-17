@@ -194,13 +194,20 @@ class FranchiseeController extends Controller
         $franchiseeList = Franchisees::all();
         $input = $req->all();
         $errMsg = '';
+        //Cek apakah yg login pusat
+        if ($input['username'] == 'tahujeletot') {
+            if ($input['password'] == 'jeletottahu') {
+                return redirect('franchiser/list/franchisee');
+            }
+        }
+        //Jika bkn pusat, cek mitra
         foreach ($franchiseeList as $franchisee) {
             if ($franchisee['username'] == $input['username']) {
                 if ($franchisee['password'] == $input['password']) {
                     $inputData = array (
                         'franchiseeInput' => $franchisee
                     );
-                    return view('franchisee/dashboarduser') -> with($inputData);
+                    return redirect('franchisee/'.$franchisee['id']) -> with($inputData);
                 } else {
                     $errMsg = "Username dan Password tidak cocok!";
                 }
@@ -228,7 +235,6 @@ class FranchiseeController extends Controller
         //Ubah data Penjualan Tahu yang tadinya masih serialized jadi array unpack
         $unpackserialize = unserialize($franchisee['jualtahu']);
         //ambil untuk today (18 sept 2016)
-        $franchisee['jualtahu'] = $unpackserialize['18-09-2016'];
         $inputData = array (
             'franchiseeInput' => $franchisee
         );
@@ -264,7 +270,7 @@ class FranchiseeController extends Controller
             'franchiseeInput' => $franchisee,
             'franchiseeStok' => $stok
         );
-        return view('franchisee/dashboarduser') -> with($inputData);
+        return redirect('franchisee/'.$franchisee['id']) -> with($inputData);
     }
 
     public function updateStok($id, Request $req) {
@@ -282,7 +288,7 @@ class FranchiseeController extends Controller
             'franchiseeInput' => $franchisee,
             'franchiseeStok' => $stok
         );
-        return view('franchisee/dashboarduser') -> with($inputData);
+        return redirect('franchisee/'.$franchisee['id']) -> with($inputData);
     }
 
     public function testPlace() {
