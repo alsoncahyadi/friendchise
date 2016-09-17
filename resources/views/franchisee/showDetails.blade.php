@@ -68,6 +68,7 @@
 				<td>
 					<?php
 						$unserializedJualtahu = unserialize($franchiseeInput->jualtahu);
+						krsort($unserializedJualtahu);
 						foreach ($unserializedJualtahu as $tanggal => $jumlah) {
 							echo '<strong>(' . $tanggal . '): </strong>' . $jumlah . '<br>';
 						}

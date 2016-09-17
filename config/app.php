@@ -156,6 +156,7 @@ return [
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
         Khill\Lavacharts\Laravel\LavachartsServiceProvider::class,
+        Fx3costa\Laravelchartjs\Providers\ChartjsServiceProvider::class,
 
         /*
          * COLLECTIVE

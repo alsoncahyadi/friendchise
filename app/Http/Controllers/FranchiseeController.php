@@ -7,6 +7,8 @@ use App\Http\Requests;
 
 use App\Franchisees;
 
+use View;
+
 //require public_path() .'\..\vendor\autoload.php';
 
 //$lava = new Khill\Lavacharts\Lavacharts;
@@ -128,6 +130,32 @@ class FranchiseeController extends Controller
         return view('franchisee/showDetails') -> with($inputData);        
     }
 
+    public function chartForJual()
+    {
+        /*
+        $viewer = Franchisees::raw('SUM(numberofview) as count')
+            ->orderBy('created_at', 'desc')
+            ->groupBy(Franchisees::raw("year(created_at)"))
+            ->get()->toArray();
+        */
+        $viewer = Franchisees::all()->toArray();
+        //Test bikin array
+
+        $viewer = array_column($viewer, 'count');
+        
+        /*
+        $click = Click::select(DB::raw("SUM(numberofclick) as count"))
+            ->orderBy("created_at")
+            ->groupBy(DB::raw("year(created_at)"))
+            ->get()->toArray();
+        $click = array_column($click, 'count');
+        */
+        
+        return view('chartjs')
+                ->with('viewer',json_encode($viewer,JSON_NUMERIC_CHECK));
+                //->with('click',json_encode($click,JSON_NUMERIC_CHECK));
+    }
+
     public function loginPost(Request $req) {
         $franchiseeList = Franchisees::all();
         $input = $req->all();
@@ -181,7 +209,10 @@ class FranchiseeController extends Controller
         if ($req->date == '') {
             $req->date = date('d-m-Y');
         }
-
+        if (!array_key_exists($req->date, $arrayJualTahu)) {
+            //echo "test";
+            $arrayJualTahu[$req->date] = 0;    
+        }
         $arrayJualTahu[$req->date] += $req->jumlah;
         //Pack
         $packing = serialize($arrayJualTahu);
@@ -201,7 +232,7 @@ class FranchiseeController extends Controller
     public function updateStok($id, Request $req) {
         //Ambil record
         $franchisee = Franchisees::findOrFail($id);
-  
+
         //Update
         $franchisee['stoktahu'] += $req->jumlah;
         $franchisee->save();

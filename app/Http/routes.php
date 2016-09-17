@@ -200,6 +200,11 @@ Route::get('franchisee/sampledata', function() {
 	]);
 });
 
+//Route untuk graph
+Route::get('testchart', function() {
+	return view('testchart');
+});
+
 //Untuk return data user
 /*
 Route::get('franchisee', function() {
