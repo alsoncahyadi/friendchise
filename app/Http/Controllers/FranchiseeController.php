@@ -7,6 +7,10 @@ use App\Http\Requests;
 
 use App\Franchisees;
 
+//require public_path() .'\..\vendor\autoload.php';
+
+//$lava = new Khill\Lavacharts\Lavacharts;
+
 class FranchiseeController extends Controller
 {
     public function index() {
@@ -117,6 +121,10 @@ class FranchiseeController extends Controller
         $inputData = array (
             'franchiseeInput' => $franchisee
         );
+
+        //BUAT GRAPH
+        //$stocksTable = Lava::DataTable();
+
         return view('franchisee/showDetails') -> with($inputData);        
     }
 
