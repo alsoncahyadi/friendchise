@@ -1,7 +1,7 @@
 @extends('template')
 
 @section('main')
-    <div id='franchisee'>
+    <div id='log-success'>
         <h2> Login SUCCESSFUL </h2>
     </div>
 @stop

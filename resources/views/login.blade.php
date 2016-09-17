@@ -72,7 +72,7 @@
                         <div class="single_blog_post clearfix" data-animated="fadeInUp">
                             
                             <div class="single_blog_post_content">
-                                <form method="POST" action = "{{ url('franchisee/login') }}">
+                                <form method="POST" action = "{{ url('login') }}">
                                     <div class ="form-group">
                                             <h3>Username</h3>
                                             <input type="text" name="username" id="username" class = "form-control margbot30">

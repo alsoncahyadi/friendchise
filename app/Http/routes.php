@@ -35,8 +35,6 @@ Route::patch('schedule/{schedule}', 'ScheduleController@update');
 Route::delete('franchisee/{franchisee}', 'FranchiseeController@delete');
 Route::delete('schedule/{schedule}', 'ScheduleController@delete');
 
-//MAPS
-
 ////MITRA
 //Tambahkurang penjualan dan stok (Dashboard mitra)
 Route::get('franchisee/{franchisee}', ['uses' =>'FranchiseeController@userdashboard', 'as'=>'userdashboard']);
@@ -44,5 +42,7 @@ Route::get('franchisee/{franchisee}', ['uses' =>'FranchiseeController@userdashbo
 //Update penjualan dan stok
 Route::patch('franchisee/{franchisee}/updatepenjualan', 'FranchiseeController@updatePenjualan');
 Route::patch('franchisee/{franchisee}/updatestok', 'FranchiseeController@updateStok');
+
+//MAPS
 
 ?>

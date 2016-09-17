@@ -116,8 +116,12 @@
 					<?php
 						$unserializedJualtahu = unserialize($franchiseeInput->jualtahu);
 						krsort($unserializedJualtahu);
+						$i=0;
 						foreach ($unserializedJualtahu as $tanggal => $jumlah) {
-							echo '<strong>(' . $tanggal . '): </strong>' . $jumlah . '<br>';
+							if ($i<10) {
+								echo '<strong>(' . $tanggal . '): </strong>' . $jumlah . '<br>';
+							}
+							$i++;
 						}
 					?>
 					<!-- {{ $franchiseeInput->jualtahu }} -->

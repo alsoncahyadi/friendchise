@@ -220,14 +220,14 @@ class FranchiseeController extends Controller
             'errMsg' => "Login failed! " . $errMsg,
             
         );
-        return view('franchisee/login') -> with($inputMsg);
+        return view('login') -> with($inputMsg);
     }
 
     public function loginGet(Request $req) {
         $inputMsg = array (
             'errMsg' => '',
         );
-        return view('franchisee/login') -> with($inputMsg);
+        return view('login') -> with($inputMsg);
     }
 
     public function userdashboard($id) {
