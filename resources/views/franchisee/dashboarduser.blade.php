@@ -22,7 +22,7 @@
 					
 					<!-- LOGO -->
 					<div class="logo pull-left">
-						<a href="#" >
+						<a href="/" >
 						<span class="b1">F</span>
 						<span class="b1">R</span>
 						<span class="b2">I</span>
@@ -36,13 +36,6 @@
 						<span class="b5">E</span>
 						</a>
 					</div><!-- //LOGO -->
-					
-					<!-- SEARCH FORM -->
-					<div id="search-form" class="pull-right">
-						<form method="get" action="#">
-							<input type="text" name="Search" value="Search" onFocus="if (this.value == 'Search') this.value = '';" onBlur="if (this.value == '') this.value = 'Search';" />
-						</form>
-					</div><!-- SEARCH FORM -->
 					
 					<!-- MENU -->
 					<!--
@@ -94,11 +87,10 @@
 					<div class="blog_block col-lg-8 col-md-8 padbot50">
 						
 						<!-- SINGLE BLOG POST -->
-						<div class="single_blog_post clearfix" data-animated="fadeInUp">
-							<div class="single_blog_post_content">
 							{!! Form::model ($franchiseeInput, ['method' => 'PATCH', 'action' => ['FranchiseeController@updatePenjualan', $franchiseeInput->id]]) !!}
+                            
+									<h2>Update Penjualan Tahu Jeletot</h2>
 								<div class ="form-group">
-									<h2>Penjualan Tahu Jeletot</h2>
 									<div class="row  margbot30">
 										<div class="col-lg-4">									
 												<input type="number" placeholder="TAMBAH PENJUALAN contoh: 5" max ="500" min="-500" name="jumlah" id="jumlah" class = "form-control">
@@ -114,9 +106,10 @@
 								</div>
 							{!! Form::close() !!}
 							{!! Form::model ($franchiseeInput, ['method' => 'PATCH', 'action' => ['FranchiseeController@updateStok', $franchiseeInput->id]]) !!}
+                            <h2>Update Stok Tahu Jeletot</h2>
 								<div class ="form-group">
-									<h2>Stok Tahu Jeletot</h2>
-									<div class="row  margbot30">
+									
+									<div class="row  margbot50">
 										<div class="col-lg-4">
 												<input type="number" placeholder="TAMBAH STOK contoh: 5" max ="500" min="-500" name="jumlah" id="jumlah" class = "form-control">
 										</div>
@@ -125,33 +118,26 @@
 										</div>
 										
 									</div>
-									<div class="row margbot30">
-										<th>
-											Penjualan Tahu
-										</th>
+											<h2>Penjualan Tahu Jeletot</h2>
 										<br></br>
-										<td>
+                                        <table class="table">
 											<?php
 											if (!empty($franchiseeInput->jualtahu)) {
 												$unserializedJualtahu = unserialize($franchiseeInput->jualtahu);
 												krsort($unserializedJualtahu);
+												$i = 0;
 												foreach ($unserializedJualtahu as $tanggal => $jumlah) {
-													echo '<strong>(' . $tanggal . '): </strong>' . $jumlah . '<br>';
+													if ($i<5) {echo '<tr><th style="width:100px">' . $tanggal . '</th>' .'<td>'. $jumlah.'</td></tr>' ; } $i++;
 												}
 											}
 											?>
-										</td>
+                                            </table>
+                                            </div>
 										<?php echo '<br></br>';?>
-										<th>
-											Stok Tahu
-										</th>
-										<td>
+											<h2>Stok Tahu Jeletot</h2>
 											<?php 
-												echo '<br></br>';
-												echo '<strong>' . $franchiseeInput['stoktahu'] . '</strong>';
+												echo '<strong><h3>' . $franchiseeInput['stoktahu'] . '</h3></strong>';
 											?>
-										</td>
-									</div>
 								</div>
 
 							{!! Form::close() !!}
@@ -214,47 +200,7 @@
 	<section id="contacts">
 	</section><!-- //CONTACTS -->
 	
-	<!-- FOOTER -->
-	<footer>
-			
-		<!-- CONTAINER -->
-		<div class="container">
-			
-			<!-- ROW -->
-			<div class="row" data-appear-top-offset="-200" data-animated="fadeInUp">
-				
-				<div class="col-lg-2 col-md-2 col-sm-2 padbot30">
-					
-				</div>
-				
-				<div class="col-lg-8 col-md-8 col-sm-8 padbot30 foot_about_block">
-					<h4><b>About</b> us</h4>
-					<p>We value people over profits, quality over quantity, and keeping it real. As such, we deliver an unmatched working relationship with our clients.</p>
-					<p>Our team is intentionally small, eclectic, and skilled; with our in-house expertise, we provide sharp and</p>
-					<ul class="social">
-						<li><a href="javascript:void(0);" ><i class="fa fa-twitter"></i></a></li>
-						<li><a href="javascript:void(0);" ><i class="fa fa-facebook"></i></a></li>
-						<li><a href="javascript:void(0);" ><i class="fa fa-google-plus"></i></a></li>
-						<li><a href="javascript:void(0);" ><i class="fa fa-pinterest-square"></i></a></li>
-						<li><a href="javascript:void(0);" ><i class="map_show fa fa-map-marker"></i></a></li>
-					</ul>
-				</div>
-				
-				<div class="respond_clear"></div>
-				
-				<div class="col-lg-2 col-md-2 padbot30">
-					
-				</div>
-			</div><!-- //ROW -->
-			<div class="row copyright">
-				<div class="col-lg-12 text-center">
-				
-				 <p>FriendChise <i class="fa fa-check"></i>, <a href="https://hmif.itb.ac.id/" >by Team Bakwan</a></p>
-				</div>
-			
-			</div><!-- //ROW -->
-		</div><!-- //CONTAINER -->
-	</footer><!-- //FOOTER -->
+	
 	
 	
 	
@@ -264,5 +210,5 @@
 @stop
 
 @section('footer')
-<!-- ini ga gua pake -->
+		@include('footer')
 @stop

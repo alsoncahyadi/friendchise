@@ -34,6 +34,8 @@
         <!--[endif]-->
     </head>    
     <body>
+    	<!-- Tandai bagian di bawah yield untuk main section-->
+         
           <!-- Tandai bagian di bawah yield untuk main section-->
           @yield('main')
         

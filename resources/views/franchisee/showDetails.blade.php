@@ -20,7 +20,7 @@
                         
                         <!-- LOGO -->
                         <div class="logo pull-left">
-                            <a href="#" >
+                            <a href="/" >
                             <span class="b1">F</span>
                             <span class="b1">R</span>
                             <span class="b2">I</span>
@@ -165,9 +165,14 @@
 	        echo \Lava::render('LineChart', 'MyStocks', 'sales-chart');
 	?>
     
+     <!-- CONTACTS -->
+    <section id="contacts">
+    </section><!-- //CONTACTS -->
+    
 
 
 @stop
 
 @section('footer')
+@include('footer')
 @stop

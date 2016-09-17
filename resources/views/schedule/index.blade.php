@@ -22,7 +22,7 @@
                         
                         <!-- LOGO -->
                         <div class="logo pull-left">
-                            <a href="#" >
+                            <a href="/" >
                             <span class="b1">F</span>
                             <span class="b1">R</span>
                             <span class="b2">I</span>
@@ -141,10 +141,12 @@
 	</div><!-- PAGE -->
     
    
-    
+     <!-- CONTACTS -->
+    <section id="contacts">
+    </section><!-- //CONTACTS -->
     </div>
 @stop
 
 @section('footer')
-	
+	@include('footer')
 @stop

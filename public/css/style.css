@@ -5,7 +5,7 @@
 ::-moz-selection {background: #261002; color:#fff;}
 
 footer ::selection {background: #fff; color:#261002;}
-footer ::-moz-selection {background: #fff; color:#261002;}
+footer ::-moz-selection {background: #fff; color:#777;}
 
 .breadcrumbs_block ::selection {background: #fff; color:#261002;}
 .breadcrumbs_block ::-moz-selection {background: #fff; color:#261002;}
@@ -85,7 +85,7 @@ img {
 }
 
 a {color:#999; transition: all 0.3s ease-in-out; -webkit-transition: all 0.3s ease-in-out;}
-a:hover, a:focus {text-decoration:none; color:#261002;}
+a:hover, a:focus {text-decoration:none; color:#555;}
 
 
 
@@ -1107,7 +1107,7 @@ textarea,
 input[type="text"] {
 	width:100%;
 	margin:0 0 10px;
-	padding: 10px 8px;
+	padding: 3px 8px;
 	text-transform:none;
 	font-family: 'Roboto', sans-serif;
 	font-weight:400;
@@ -1127,7 +1127,7 @@ textarea,
 input[type="password"] {
 	width:100%;
 	margin:0 0 10px;
-	padding: 10px 8px;
+	padding: 3px 8px;
 	text-transform:none;
 	font-family: 'Roboto', sans-serif;
 	font-weight:400;
@@ -1147,7 +1147,7 @@ textarea,
 input[type="number"] {
 	width:100%;
 	margin:0 0 10px;
-	padding: 10px 8px;
+	padding: 3px 8px;
 	text-transform:none;
 	font-family: 'Roboto', sans-serif;
 	font-weight:400;
