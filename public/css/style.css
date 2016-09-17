@@ -1215,7 +1215,7 @@ input[type="color"]:focus {
 	transition: all 0.3s ease-in-out;
 	-webkit-transition: all 0.3s ease-in-out;
 }
-.contact_btn.active, .contact_btn:hover {background: none; color:#fff; border-color:#ccc;}
+.contact_btn.active, .contact_btn:hover {background: none; color:#77500F; border-color:#77500F;}
 
 .mitra_btn {
 	display:inline-block;
@@ -1237,7 +1237,7 @@ input[type="color"]:focus {
 	transition: all 0.3s ease-in-out;
 	-webkit-transition: all 0.3s ease-in-out;
 }
-.mitra_btn.active, .mitra_btn:hover {background: none; color:#fff; border-color:#ccc;}
+.mitra_btn.active, .mitra_btn:hover {background: none; color:#77500F; border-color:#77500F;}
 
 .notification_error {color:#30a67c;}
 
