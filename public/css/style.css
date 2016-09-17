@@ -519,7 +519,7 @@ header {
 	font-weight:300;
 	line-height:26px;
 	font-size:17px;
-	color:#aaa;
+	color:#333;
 }
 .purpose_block .btn {margin-top:30px; margin-right:16px; background-color:#261002;}
 .purpose_block .btn-active {overflow:hidden;}
@@ -547,7 +547,7 @@ header {
 }
 .purpose_block .btn-active:hover span,
 .purpose_block .btn-active:focus span {
-	color:#1c1c1c;
+	color:#261002;
 	-webkit-transform: translateY(-100%);
 	-moz-transform: translateY(-100%);
 	transform: translateY(-100%);
@@ -798,11 +798,11 @@ ul.project_info li span {color:#979797;}
 	width:60px;
 	height:60px;
 	margin:0 7px 0 10px;
-	border:2px solid #261002;
+	border:2px solid #848484;
 	border-radius:50%;
 	line-height:58px;
 	font-size:26px;
-	color:#261002;
+	color:#848484;
 }
 .crewman_item:hover .crewman_social {
 	bottom:56px;
@@ -1002,7 +1002,7 @@ footer {
 	width:100%;
 	padding:60px 0 10px;
 	color:#999;
-	background-color:#1c1c1c;
+	background-color:#261002;
 	transform: translateX(-50%);
 	-ms-transform: translateX(-50%);
 	-webkit-transform: translateX(-50%);
@@ -1081,15 +1081,15 @@ footer h4 {color:#fff;}
 	display:block;
 	width:50px;
 	height:50px;
-	border:1px solid #242424;
+	border:1px solid #707070;
 	text-align:center;
 	line-height:46px;
 	font-size:23px;
-	color:#261002;
+	color:#707070;
 }
 .social li a:hover {
-	color:#ccc;
-	border-color:#ccc;
+	color:#fff;
+	border-color:#fff;
 }
 
 

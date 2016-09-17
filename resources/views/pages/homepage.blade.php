@@ -112,26 +112,26 @@
 					<div class="row">
 						<div class="col-lg-3 col-md-3 col-sm-6 col-xs-6 col-ss-12 margbot30">
 							<a class="services_item" href="javascript:void(0);" >
-								<p><b>Easy</b> Customize</p>
-								<span>Quality and very comfortable design, does not hurt the eyes and pleasant to use.</span>
+								<p><b>Rekomendasi</b> Lokasi</p>
+								<span>Sistem akan memberikan rekomendasi lokasi yang strategis baik untuk para mitra baru yang akan bergabung maupun mitra lama yang ingin bergabung.</span>
 							</a>
 						</div>
 						<div class="col-lg-3 col-md-3 col-sm-6 col-xs-6 col-ss-12 margbot30">
 							<a class="services_item" href="javascript:void(0);" >
-								<p><b>Modern</b> Design</p>
-								<span>Quality and unique design that meets all the requirements and trends of modern web design.</span>
+								<p><b>Real Time</b> Monitoring</p>
+								<span>Pewaralaba dapat melakukan monitoring hasil penjualan dan status stok terhadap setiap mitra secara Real Time.</span>
 							</a>
 						</div>
 						<div class="col-lg-3 col-md-3 col-sm-6 col-xs-6 col-ss-12 margbot30">
 							<a class="services_item" href="javascript:void(0);" >
-								<p><b>Responsive</b> Design</p>
-								<span>Design that will be equally beautifully displayed on all your devices, tablet, smartphone or computer.</span>
+								<p><b>Fleksibilitas</b> Waralaba</p>
+								<span>Sistem mendukung berbagai jenis waralaba yang akan dilayani.</span>
 							</a>
 						</div>
 						<div class="col-lg-3 col-md-3 col-sm-6 col-xs-6 col-ss-12 margbot30">
 							<a class="services_item" href="javascript:void(0);" >
-								<p><b>Free</b> Updates & Support</p>
-								<span>Hour and great support template. You can always ask a question and we will help you.</span>
+								<p><b>Memajukan</b> UKM</p>
+								<span>Dengan adanya sistem waralaba seperti ini, diharapkan UKM akan lebih mudah untuk berkembang.</span>
 							</a>
 						</div>
 					</div><!-- //ROW -->
@@ -150,11 +150,10 @@
 					<div class="row">
 					
 						<div class="col-lg-7 col-md-7 col-sm-7" data-appear-top-offset="-200" data-animated="fadeInLeft">
-							<h2><b>Multi-purpose</b> WordPress Theme</h2>
-							<p>We tried to make very high-quality product and so our code is very neat and clean. Whatever anyone could improve and modify the template to your liking.</p>
-							<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
-							<a class="btn btn-active" href="javascript:void(0);" ><span data-hover="Yes I want it">Byu This theme</span></a>
-							<a class="btn" href="javascript:void(0);" >View more templates</a>
+							<h2>Mari Bergabung di <b>FriendChise</b></h2>
+							<p>Dengan fitur Real-Time Monitoring dan Rekomendasi Tempat Strategis dari sistem, UKM anda akan terpacu untuk berkembang lebih pesat.</p>
+							<p>Tunggu apalagi, segera daftarkan akun anda!</p>
+							<a class="btn btn-active" href="franchisee/create" ><span data-hover="Ya, Saya Mau">Bergabung</span></a>
 						</div>
 						
 						<div class="col-lg-5 col-md-5 col-sm-5 ipad_img_in" data-appear-top-offset="-200" data-animated="fadeInRight">
@@ -180,6 +179,8 @@
 					
 					<!-- ROW -->
 					<div class="row">
+                    <div class="col-lg-2 col-md-2 col-sm-2">
+						</div>
 						<div class="col-lg-2 col-md-2 col-sm-2 client_img">
 							<img src="images/clients/1.jpg" alt="" />
 						</div>
@@ -192,12 +193,16 @@
 						<div class="col-lg-2 col-md-2 col-sm-2 client_img">
 							<img src="images/clients/4.jpg" alt="" />
 						</div>
+                        <div class="col-lg-2 col-md-2 col-sm-2">
+						</div>
+                        <!--
 						<div class="col-lg-2 col-md-2 col-sm-2 client_img">
 							<img src="images/clients/5.jpg" alt="" />
 						</div>
 						<div class="col-lg-2 col-md-2 col-sm-2 client_img">
 							<img src="images/clients/6.jpg" alt="" />
 						</div>
+                        -->
 					</div><!-- //ROW -->
 				</div><!-- CONTAINER -->
 			</div><!-- //OUR CLIENTS -->
@@ -225,8 +230,8 @@
 								</div>
 								<div class="crewman_descr center">
 									<div class="crewman_descr_cont">
-										<p>Sarah Brown</p>
-										<span>Director</span>
+										<p>Alson Cahyadi</p>
+										<span>Back End Programmer</span>
 									</div>
 								</div>
 								<div class="crewman_social">
@@ -244,8 +249,8 @@
 								</div>
 								<div class="crewman_descr center">
 									<div class="crewman_descr_cont">
-										<p>David Jones</p>
-										<span>Creative Director</span>
+										<p>Ari Pratama Zhorifiandi</p>
+										<span>Front End Programmer</span>
 									</div>
 								</div>
 								<div class="crewman_social">
@@ -264,8 +269,8 @@
 								</div>
 								<div class="crewman_descr center">
 									<div class="crewman_descr_cont">
-										<p>Kate Smith</p>
-										<span>Manager</span>
+										<p>Geraldi Dzakwan</p>
+										<span>Lead Programmer</span>
 									</div>
 								</div>
 								<div class="crewman_social">
@@ -275,194 +280,13 @@
 							</div>
 						</div><!-- crewman3 -->
 						
-						<!-- crewman4 -->
-						<div class="item">
-							<div class="crewman_item">
-								<div class="crewman">
-									<img src="images/team/4.jpg" alt="" />
-								</div>
-								<div class="crewman_descr center">
-									<div class="crewman_descr_cont">
-										<p>Peter Parker</p>
-										<span>Manager</span>
-									</div>
-								</div>
-								<div class="crewman_social">
-									<a href="javascript:void(0);" ><i class="fa fa-twitter"></i></a>
-									<a href="javascript:void(0);" ><i class="fa fa-facebook-square"></i></a>
-								</div>
-							</div>
-						</div><!-- crewman4 -->
 						
-						<!-- crewman5 -->
-						<div class="item">
-							<div class="crewman_item">
-								<div class="crewman">
-									<img src="images/team/5.jpg" alt="" />
-								</div>
-								<div class="crewman_descr center">
-									<div class="crewman_descr_cont">
-										<p>Jim Moss</p>
-										<span>Designer</span>
-									</div>
-								</div>
-								<div class="crewman_social">
-									<a href="javascript:void(0);" ><i class="fa fa-google-plus"></i></a>
-									<a href="javascript:void(0);" ><i class="fa fa-twitter"></i></a>
-									<a href="javascript:void(0);" ><i class="fa fa-facebook-square"></i></a>
-								</div>
-							</div>
-						</div><!-- crewman5 -->
-						
-						<!-- crewman6 -->
-						<div class="item">
-							<div class="crewman_item">
-								<div class="crewman">
-									<img src="images/team/6.jpg" alt="" />
-								</div>
-								<div class="crewman_descr center">
-									<div class="crewman_descr_cont">
-										<p>John Marks</p>
-										<span>Designer</span>
-									</div>
-								</div>
-								<div class="crewman_social">
-									<a href="javascript:void(0);" ><i class="fa fa-twitter"></i></a>
-									<a href="javascript:void(0);" ><i class="fa fa-facebook-square"></i></a>
-								</div>
-							</div>
-						</div><!-- crewman6 -->
-						
-						<!-- crewman7 -->
-						<div class="item">
-							<div class="crewman_item">
-								<div class="crewman">
-									<img src="images/team/7.jpg" alt="" />
-								</div>
-								<div class="crewman_descr center">
-									<div class="crewman_descr_cont">
-										<p>Joe Mades</p>
-										<span>Developer</span>
-									</div>
-								</div>
-								<div class="crewman_social">
-									<a href="javascript:void(0);" ><i class="fa fa-twitter"></i></a>
-									<a href="javascript:void(0);" ><i class="fa fa-facebook-square"></i></a>
-								</div>
-							</div>
-						</div><!-- crewman7 -->
-						
-						<!-- crewman8 -->
-						<div class="item">
-							<div class="crewman_item">
-								<div class="crewman">
-									<img src="images/team/8.jpg" alt="" />
-								</div>
-								<div class="crewman_descr center">
-									<div class="crewman_descr_cont">
-										<p>Julia Anderson</p>
-										<span>Developer</span>
-									</div>
-								</div>
-								<div class="crewman_social">
-									<a href="javascript:void(0);" ><i class="fa fa-google-plus"></i></a>
-									<a href="javascript:void(0);" ><i class="fa fa-twitter"></i></a>
-									<a href="javascript:void(0);" ><i class="fa fa-facebook-square"></i></a>
-								</div>
-							</div>
-						</div><!-- crewman8 -->
 					</div><!-- TEAM SLIDER -->
 				</div><!-- //ROW -->
 			</div><!-- //CONTAINER -->
 		</section><!-- //TEAM -->
 		
 		
-		<!-- NEWS -->
-		<section id="news">
-		
-			<!-- CONTAINER -->
-			<div class="container">
-				<h2><b>Clients</b> say about us</h2>
-				
-				<!-- TESTIMONIALS -->
-				<div class="testimonials" data-appear-top-offset="-200" data-animated="fadeInUp">
-						
-					<!-- TESTIMONIALS SLIDER -->
-					<div class="owl-demo owl-carousel testim_slider">
-						
-						<!-- TESTIMONIAL1 -->
-						<div class="item">
-							<div class="testim_content">“There is nothing scary in the darkness, if you encounter it face-to-face. The inevitable price we pay for our happiness is eternal fear to lose it. When you start thinking a lot about your past, it becomes your present and you can't see your future without it.”</div>
-							<div class="testim_author">—  Anna Balashova, <b>Philosopher</b></div>
-						</div><!-- TESTIMONIAL1 -->
-						
-						<!-- TESTIMONIAL2 -->
-						<div class="item">
-							<div class="testim_content">“There is nothing scary in the darkness, if you encounter it face-to-face. The inevitable price we pay for our happiness is eternal fear to lose it. When you start thinking a lot about your past, it becomes your present and you can't see your future without it.”</div>
-							<div class="testim_author">—  Anna Balashova, <b>Philosopher</b></div>
-						</div><!-- TESTIMONIAL2 -->
-						
-						<!-- TESTIMONIAL3 -->
-						<div class="item">
-							<div class="testim_content">“There is nothing scary in the darkness, if you encounter it face-to-face. The inevitable price we pay for our happiness is eternal fear to lose it. When you start thinking a lot about your past, it becomes your present and you can't see your future without it.”</div>
-							<div class="testim_author">—  Anna Balashova, <b>Philosopher</b></div>
-						</div><!-- TESTIMONIAL3 -->
-					</div><!-- TESTIMONIALS SLIDER -->
-				</div><!-- //TESTIMONIALS -->
-				
-				<!-- RECENT POSTS -->
-				<div class="row recent_posts" data-appear-top-offset="-200" data-animated="fadeInUp">
-					<div class="col-lg-4 col-md-4 col-sm-4 padbot30 post_item_block">
-						<div class="post_item">
-							<div class="post_item_img">
-								<img src="images/blog/1.jpg" alt="" />
-								<a class="link" href="blog-post.html" ></a>
-							</div>
-							<div class="post_item_content">
-								<a class="title" href="blog-post.html" >Inteligent Transitions In UX Design</a>
-								<ul class="post_item_inf">
-									<li><a href="javascript:void(0);" >Anna</a> |</li>
-									<li><a href="javascript:void(0);" >Photography</a> |</li>
-									<li><a href="javascript:void(0);" >10 Comments</a></li>
-								</ul>
-							</div>
-						</div>
-					</div>
-					<div class="col-lg-4 col-md-4 col-sm-4 padbot30 post_item_block">
-						<div class="post_item">
-							<div class="post_item_img">
-								<img src="images/blog/2.jpg" alt="" />
-								<a class="link" href="blog-post.html"></a>
-							</div>
-							<div class="post_item_content">
-								<a class="title" href="blog-post.html" >Recent trends in storytelling</a>
-								<ul class="post_item_inf">
-									<li><a href="javascript:void(0);" >Anna</a> |</li>
-									<li><a href="javascript:void(0);" >Web Design</a> |</li>
-									<li><a href="javascript:void(0);" >No comment</a></li>
-								</ul>
-							</div>
-						</div>
-					</div>
-					<div class="col-lg-4 col-md-4 col-sm-4 padbot30 post_item_block">
-						<div class="post_item">
-							<div class="post_item_img">
-								<img src="images/blog/3.jpg" alt="" />
-								<a class="link" href="blog-post.html"></a>
-							</div>
-							<div class="post_item_content">
-								<a class="title" href="blog-post.html" >Supernatural FX Showreel</a>
-								<ul class="post_item_inf">
-									<li><a href="javascript:void(0);" >Anna</a> |</li>
-									<li><a href="javascript:void(0);" >Creative</a> |</li>
-									<li><a href="javascript:void(0);" >3 Comments</a></li>
-								</ul>
-							</div>
-						</div>
-					</div>
-				</div><!-- RECENT POSTS -->
-			</div><!-- //CONTAINER -->
-		</section><!-- //NEWS -->
 	</div><!-- //PAGE -->
 	
 	<!-- CONTACTS -->
@@ -478,44 +302,11 @@
 			<!-- ROW -->
 			<div class="row" data-appear-top-offset="-200" data-animated="fadeInUp">
 				
-				<div class="col-lg-4 col-md-4 col-sm-6 padbot30">
-					<h4><b>Featured</b> posts</h4>
-					<div class="recent_posts_small clearfix">
-						<div class="post_item_img_small">
-							<img src="images/blog/1.jpg" alt="" />
-						</div>
-						<div class="post_item_content_small">
-							<a class="title" href="blog.html" >As we have developed a unique layout template</a>
-							<ul class="post_item_inf_small">
-								<li>10 January 2014</li>
-							</ul>
-						</div>
-					</div>
-					<div class="recent_posts_small clearfix">
-						<div class="post_item_img_small">
-							<img src="images/blog/2.jpg" alt="" />
-						</div>
-						<div class="post_item_content_small">
-							<a class="title" href="blog.html" >How much is to develop a design for the game?</a>
-							<ul class="post_item_inf_small">
-								<li>14 January 2014</li>
-							</ul>
-						</div>
-					</div>
-					<div class="recent_posts_small clearfix">
-						<div class="post_item_img_small">
-							<img src="images/blog/3.jpg" alt="" />
-						</div>
-						<div class="post_item_content_small">
-							<a class="title" href="blog.html" >How to pump designer</a>
-							<ul class="post_item_inf_small">
-								<li>21 December 2013</li>
-							</ul>
-						</div>
-					</div>
+				<div class="col-lg-2 col-md-2 col-sm-2 padbot30">
+					
 				</div>
 				
-				<div class="col-lg-4 col-md-4 col-sm-6 padbot30 foot_about_block">
+				<div class="col-lg-8 col-md-8 col-sm-8 padbot30 foot_about_block">
 					<h4><b>About</b> us</h4>
 					<p>We value people over profits, quality over quantity, and keeping it real. As such, we deliver an unmatched working relationship with our clients.</p>
 					<p>Our team is intentionally small, eclectic, and skilled; with our in-house expertise, we provide sharp and</p>
@@ -530,26 +321,14 @@
 				
 				<div class="respond_clear"></div>
 				
-				<div class="col-lg-4 col-md-4 padbot30">
-					<h4><b>Contacts</b> Us</h4>
+				<div class="col-lg-2 col-md-2 padbot30">
 					
-					<!-- CONTACT FORM -->
-					<div class="span9 contact_form">
-						<div id="note"></div>
-						<div id="fields">
-							<form id="contact-form-face" class="clearfix" action="#">
-								<input type="text" name="name" value="Name" onFocus="if (this.value == 'Name') this.value = '';" onBlur="if (this.value == '') this.value = 'Name';" />
-								<textarea name="message" onFocus="if (this.value == 'Message') this.value = '';" onBlur="if (this.value == '') this.value = 'Message';">Message</textarea>
-								<input class="contact_btn" type="submit" value="Send message" />
-							</form>
-						</div>
-					</div><!-- //CONTACT FORM -->
 				</div>
 			</div><!-- //ROW -->
 			<div class="row copyright">
 				<div class="col-lg-12 text-center">
 				
-				 <p>Crafted with <i class="fa fa-heart"></i>, <a href="http://designscrazed.org/" >Designscrazed</a></p>
+				 <p>FriendChise <i class="fa fa-check"></i>, <a href="https://hmif.itb.ac.id/" >by Team Bakwan</a></p>
 				</div>
 			
 			</div><!-- //ROW -->
@@ -557,11 +336,7 @@
 	</footer><!-- //FOOTER -->
 	
 	
-	<!-- MAP -->
-	<div id="map">
-		<a class="map_hide" href="javascript:void(0);" ><i class="fa fa-angle-right"></i><i class="fa fa-angle-left"></i></a>
-		<iframe src="http://maps.google.com/maps?f=q&amp;give%20a%20hand=s_q&amp;hl=en&amp;geocode=&amp;q=london&amp;sll=37.0625,-95.677068&amp;sspn=42.631141,90.263672&amp;ie=UTF8&amp;hq=&amp;hnear=London,+United+Kingdom&amp;ll=51.500141,-0.126257&amp;spn=0.026448,0.039396&amp;z=14&amp;output=embed" ></iframe>
-	</div><!-- //MAP -->
+	
 
 </div>
 @stop

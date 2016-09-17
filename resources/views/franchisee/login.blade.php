@@ -106,7 +106,47 @@
     <section id="contacts">
     </section><!-- //CONTACTS -->
     
-    
+    <!-- FOOTER -->
+	<footer>
+			
+		<!-- CONTAINER -->
+		<div class="container">
+			
+			<!-- ROW -->
+			<div class="row" data-appear-top-offset="-200" data-animated="fadeInUp">
+				
+				<div class="col-lg-2 col-md-2 col-sm-2 padbot30">
+					
+				</div>
+				
+				<div class="col-lg-8 col-md-8 col-sm-8 padbot30 foot_about_block">
+					<h4><b>About</b> us</h4>
+					<p>We value people over profits, quality over quantity, and keeping it real. As such, we deliver an unmatched working relationship with our clients.</p>
+					<p>Our team is intentionally small, eclectic, and skilled; with our in-house expertise, we provide sharp and</p>
+					<ul class="social">
+						<li><a href="javascript:void(0);" ><i class="fa fa-twitter"></i></a></li>
+						<li><a href="javascript:void(0);" ><i class="fa fa-facebook"></i></a></li>
+						<li><a href="javascript:void(0);" ><i class="fa fa-google-plus"></i></a></li>
+						<li><a href="javascript:void(0);" ><i class="fa fa-pinterest-square"></i></a></li>
+						<li><a href="javascript:void(0);" ><i class="map_show fa fa-map-marker"></i></a></li>
+					</ul>
+				</div>
+				
+				<div class="respond_clear"></div>
+				
+				<div class="col-lg-2 col-md-2 padbot30">
+					
+				</div>
+			</div><!-- //ROW -->
+			<div class="row copyright">
+				<div class="col-lg-12 text-center">
+				
+				 <p>FriendChise <i class="fa fa-check"></i>, <a href="https://hmif.itb.ac.id/" >by Team Bakwan</a></p>
+				</div>
+			
+			</div><!-- //ROW -->
+		</div><!-- //CONTAINER -->
+	</footer><!-- //FOOTER -->
     
     
     
