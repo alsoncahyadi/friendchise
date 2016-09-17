@@ -1214,6 +1214,8 @@ input[type="color"]:focus {
 	background: none; 
 	transition: all 0.3s ease-in-out;
 	-webkit-transition: all 0.3s ease-in-out;
+	width: 200px;
+	text-align:center;
 }
 .contact_btn.active, .contact_btn:hover {background: none; color:#77500F; border-color:#77500F;}
 
@@ -1236,6 +1238,8 @@ input[type="color"]:focus {
 	background: none; 
 	transition: all 0.3s ease-in-out;
 	-webkit-transition: all 0.3s ease-in-out;
+	width: 100px;
+	text-align:center;
 }
 .mitra_btn.active, .mitra_btn:hover {background: none; color:#77500F; border-color:#77500F;}
 
