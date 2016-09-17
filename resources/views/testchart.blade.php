@@ -1,10 +1,3 @@
-
-<!--
-<div class="container-fluid">
-    <canvas id="RadarChart" style="width:50%;"></canvas>
-</div>
--->
-
 <div id="sales-chart"></div>
 
 <?php

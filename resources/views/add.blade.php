@@ -7,8 +7,8 @@
 
 <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDTmO8q9MI6fO7uu5h6ivYYwEus3HkXy4M&libraries=places"
-  type="text/javascript"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCK4ZOyA74VQeqw3DV_EzeR_tXdPzeglo8&libraries=places"
+  type="text/javascript"></script>  
 
 <div class="container">
   <div class="col-sm-4">
@@ -75,3 +75,4 @@
     $('#lat').val(lat);
     $('#lng').val(lng);
   });
+</script>
