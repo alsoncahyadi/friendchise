@@ -1814,6 +1814,9 @@ input[type="color"]:focus {
 }
 
 @media (max-width: 767px) {
+	#login-form {
+		display : none;	
+	}
 	.container {padding-left:15px; padding-right:15px;}
 	
 	
@@ -1954,6 +1957,8 @@ input[type="color"]:focus {
 @media (max-width: 479px) {
 
 	#search-form {display:none;}
+	
+	#login-form {display:none;}
 	
 	
 /* __________ Index __________ */
