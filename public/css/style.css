@@ -19,6 +19,11 @@ table {
 	font-weight:300;
 }
 
+th {
+	background-color: #261002;
+	color: #fff;
+}
+
 body {
 	overflow-x:hidden;
 	position:relative;
@@ -257,7 +262,7 @@ header {
 	text-transform:uppercase;
 	line-height:80px;
 	font-size:24px;
-	color:#fff;
+	color:#261002;
 }
 .logo a span {
 	display:inline-block;
@@ -281,7 +286,7 @@ header {
 	right:0;
 	height:80px;
 	width:100%;
-	background-color:#261002;
+	background-color:#fff;
 	box-shadow:0 2px 3px rgba(0,0,0,0.1);
 }
 
