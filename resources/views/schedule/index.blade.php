@@ -129,7 +129,7 @@
                 <div class="col-lg-5 col-md-5"></div>
                 <div class="col-lg-4 col-md-4">
                     <a href="franchisee" class="contact_btn">
-                        Dashboard Mitra
+                        Dashboard Pusat
                     </a>
                 </div>
                 <div class="col-lg-3 col-md-3"></div>
