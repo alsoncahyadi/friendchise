@@ -85,8 +85,35 @@
 					{{ $franchiseeInput->stoktahu }}
 				</td>
 			</tr>
+
+			<tr>
+				<th>
+					Grafik Penjualan
+				</th>
+				<td>
+					<div id="sales-chart"></div>
+				</td>
+			</tr>
+
 		</table>
 	</div>
+
+	<?php
+			$salesTable = \Lava::DataTable();
+
+	        $salesTable->addDateColumn('Day of Month')->addNumberColumn('Sales');
+
+	        foreach ($franchiseeChart as $key => $value) {
+	        	$salesTable->addRow([
+	              $key, $value
+	            ]);	
+	        }
+
+	        $chart = \Lava::LineChart('MyStocks', $salesTable);
+
+	        echo \Lava::render('LineChart', 'MyStocks', 'sales-chart');
+	?>
+
 
 @stop
 

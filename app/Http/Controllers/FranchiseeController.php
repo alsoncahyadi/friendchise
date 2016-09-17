@@ -118,16 +118,20 @@ class FranchiseeController extends Controller
     //Variabel untuk nangkep detail
     public function showDetail($id) {
         $franchisee = Franchisees::findOrFail($id);
-        //Ubah data Penjualan Tahu yang tadinya masih serialized jadi array unpack
+        //Ubah data Penjualan Tahu yang tadinya mas             ih serialized jadi array unpack
         $unpackserialize = unserialize($franchisee['jualtahu']);
         //ambil untuk today (18 sept 2016)
         //$franchisee['jualtahu'] = $unpackserialize['18-09-2016'];
-        $inputData = array (
-            'franchiseeInput' => $franchisee
-        );
 
         //BUAT GRAPH
-        //$stocksTable = Lava::DataTable();
+        $franchisee = Franchisees::findOrFail($id);
+        $unserializedJualtahu = unserialize($franchisee->jualtahu);
+        krsort($unserializedJualtahu);
+
+        $inputData = array(
+            'franchiseeInput' => $franchisee,
+            'franchiseeChart' => $unserializedJualtahu
+        );
 
         return view('franchisee/showDetails') -> with($inputData);        
     }
