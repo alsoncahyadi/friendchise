@@ -17,12 +17,18 @@ table {
 	font-size: 15px;
 	font-family: 'FontAwesome', sans-serif;
 	font-weight:300;
+	padding: 10px 10px 10px 10px;
 }
 
 th {
 	background-color: #261002;
 	color: #fff;
+	font-size: 16,5px;
 }
+
+tr:nth-child(even) {background-color: #f2f2f2}
+
+tr:hover {background-color : #e3e3e3; }
 
 body {
 	overflow-x:hidden;
@@ -1210,6 +1216,28 @@ input[type="color"]:focus {
 	-webkit-transition: all 0.3s ease-in-out;
 }
 .contact_btn.active, .contact_btn:hover {background: none; color:#fff; border-color:#ccc;}
+
+.mitra_btn {
+	display:inline-block;
+	cursor:pointer;
+	margin: 0 3px 5px 0;
+	padding:9px 20px;
+	border: 2px solid #242424;
+	border-radius: 0;
+	box-shadow: 0;
+	text-shadow:none;
+	text-decoration:none;
+	text-transform:uppercase;
+	font-family: 'Roboto', sans-serif;
+	font-weight:450;
+	line-height:10px;
+	font-size:9px;
+	color:#261002;
+	background: none; 
+	transition: all 0.3s ease-in-out;
+	-webkit-transition: all 0.3s ease-in-out;
+}
+.mitra_btn.active, .mitra_btn:hover {background: none; color:#fff; border-color:#ccc;}
 
 .notification_error {color:#30a67c;}
 
