@@ -41,8 +41,9 @@
 					<!-- LOGIN FORM -->
 					<div id="login-form" class="pull-right">
 						<form method="get" action="#">
-							<input type="text" name="username" value="username" onFocus="if (this.value == 'Search') this.value = '';" onBlur="if (this.value == '') this.value = 'Search';" />
-							<input type="text" name="password" value="password" onFocus="if (this.value == 'Search') this.value = '';" onBlur="if (this.value == '') this.value = 'Search';" />
+							<input type="text" name="username" value="Username" onFocus="if (this.value == 'Username') this.value = '';" onBlur="if (this.value == '') this.value = 'Username';" />
+							<input type="password" name="password" value="password" onFocus="if (this.value == 'password') this.value = '';" onBlur="if (this.value == '') this.value = 'password';" />
+							<input type="submit" style="position: absolute; left: -9999px; width: 1px; height: 1px;" tabindex="-1" />
 						</form>
 					</div><!-- SEARCH FORM -->
 					
@@ -137,49 +138,7 @@
 				</div><!-- //CONTAINER -->
 			</div><!-- //SERVICES -->
 			
-			<!-- CLEAN CODE -->
-			<div class="cleancode_block">
-				
-				<!-- CONTAINER -->
-				<div class="container" data-appear-top-offset="-200" data-animated="fadeInUp">
-					
-					<!-- CASTOM TAB -->
-					<div id="myTabContent" class="tab-content">
-						<div class="tab-pane fade in active clearfix" id="tab1">
-							<p class="title"><b>Clean</b> Code</p>
-							<span>We tried to make very high-quality product and so our code is very neat and clean. Whatever anyone could improve and modify the template to your liking.</span>
-						</div>
-						<div class="tab-pane fade clearfix" id="tab2">
-							<p class="title"><b>Technical</b> Support</p>
-							<span>We tried to make very high-quality product and so our code is very neat and clean. Whatever anyone could improve and modify the template to your liking.</span>
-						</div>
-						<div class="tab-pane fade clearfix" id="tab3">
-							<p class="title"><b>Responsive</b></p>
-							<span>We tried to make very high-quality product and so our code is very neat and clean. Whatever anyone could improve and modify the template to your liking.</span>
-						</div>
-						<div class="tab-pane fade clearfix" id="tab4">
-							<p class="title"><b>Documentation</b></p>
-							<span>We tried to make very high-quality product and so our code is very neat and clean. Whatever anyone could improve and modify the template to your liking.</span>
-						</div>
-						<div class="tab-pane fade clearfix" id="tab5">
-							<p class="title"><b>Quality</b></p>
-							<span>We tried to make very high-quality product and so our code is very neat and clean. Whatever anyone could improve and modify the template to your liking.</span>
-						</div>
-						<div class="tab-pane fade clearfix" id="tab6">
-							<p class="title"><b>Support</b></p>
-							<span>We tried to make very high-quality product and so our code is very neat and clean. Whatever anyone could improve and modify the template to your liking.</span>
-						</div>
-					</div>
-					<ul id="myTab" class="nav nav-tabs">
-						<li class="active"><a class="i1" href="#tab1" data-toggle="tab" ><i></i><span>Clean Code</span></a></li>
-						<li><a class="i2" href="#tab2" data-toggle="tab" ><i></i><span>Support</span></a></li>
-						<li><a class="i3" href="#tab3" data-toggle="tab" ><i></i><span>Responsive</span></a></li>
-						<li><a class="i4" href="#tab4" data-toggle="tab" ><i></i><span>Documentation</span></a></li>
-						<li><a class="i5" href="#tab5" data-toggle="tab" ><i></i><span>Quality</span></a></li>
-						<li><a class="i6" href="#tab6" data-toggle="tab" ><i></i><span>Support</span></a></li>
-					</ul><!-- CASTOM TAB -->
-				</div><!-- //CONTAINER -->
-			</div><!-- //CLEAN CODE -->
+			
 			
 			<!-- MULTI PURPOSE -->
 			<div class="purpose_block">
@@ -211,129 +170,7 @@
 		<section id="projects" class="padbot20">
 		
 			<!-- CONTAINER -->
-			<div class="container">
-				<h2><b>Featured</b> Works</h2>
-			</div><!-- //CONTAINER -->
-			
-				
-			<div class="projects-wrapper" data-appear-top-offset="-200" data-animated="fadeInUp">
-				<!-- PROJECTS SLIDER -->
-				<div class="owl-demo owl-carousel projects_slider">
-					
-					<!-- work1 -->
-					<div class="item">
-						<div class="work_item">
-							<div class="work_img">
-								<img src="images/works/1.jpg" alt="" />
-								<a class="zoom" href="images/works/1.jpg" rel="prettyPhoto[portfolio1]" ></a>
-							</div>
-							<div class="work_description">
-								<div class="work_descr_cont">
-									<a href="portfolio-post.html" >Ginger Beast</a>
-									<span>17 March, 2041</span>
-								</div>
-							</div>
-						</div>
-					</div><!-- //work1 -->
-					
-					<!-- work2 -->
-					<div class="item">
-						<div class="work_item">
-							<div class="work_img">
-								<img src="images/works/2.jpg" alt="" />
-								<a class="zoom" href="images/works/2.jpg" rel="prettyPhoto[portfolio1]" ></a>
-							</div>
-							<div class="work_description">
-								<div class="work_descr_cont">
-									<a href="portfolio-post.html" >Ginger Beast</a>
-									<span>17 March, 2041</span>
-								</div>
-							</div>
-						</div>
-					</div><!-- //work2 -->
-					
-					<!-- work3 -->
-					<div class="item">
-						<div class="work_item">
-							<div class="work_img">
-								<img src="images/works/3.jpg" alt="" />
-								<a class="zoom" href="images/works/3.jpg" rel="prettyPhoto[portfolio1]" ></a>
-							</div>
-							<div class="work_description">
-								<div class="work_descr_cont">
-									<a href="portfolio-post.html" >Ginger Beast</a>
-									<span>17 March, 2041</span>
-								</div>
-							</div>
-						</div>
-					</div><!-- //work3 -->
-					
-					<!-- work4 -->
-					<div class="item">
-						<div class="work_item">
-							<div class="work_img">
-								<img src="images/works/4.jpg" alt="" />
-								<a class="zoom" href="images/works/4.jpg" rel="prettyPhoto[portfolio1]" ></a>
-							</div>
-							<div class="work_description">
-								<div class="work_descr_cont">
-									<a href="portfolio-post.html" >Ginger Beast</a>
-									<span>17 March, 2041</span>
-								</div>
-							</div>
-						</div>
-					</div><!-- //work4 -->
-					
-					<!-- work5 -->
-					<div class="item">
-						<div class="work_item">
-							<div class="work_img">
-								<img src="images/works/5.jpg" alt="" />
-								<a class="zoom" href="images/works/5.jpg" rel="prettyPhoto[portfolio1]" ></a>
-							</div>
-							<div class="work_description">
-								<div class="work_descr_cont">
-									<a href="portfolio-post.html" >Ginger Beast</a>
-									<span>17 March, 2041</span>
-								</div>
-							</div>
-						</div>
-					</div><!-- //work5 -->
-					
-					<!-- work6 -->
-					<div class="item">
-						<div class="work_item">
-							<div class="work_img">
-								<img src="images/works/6.jpg" alt="" />
-								<a class="zoom" href="images/works/6.jpg" rel="prettyPhoto[portfolio1]" ></a>
-							</div>
-							<div class="work_description">
-								<div class="work_descr_cont">
-									<a href="portfolio-post.html" >Ginger Beast</a>
-									<span>17 March, 2041</span>
-								</div>
-							</div>
-						</div>
-					</div><!-- //work6 -->
-					
-					<!-- work7 -->
-					<div class="item">
-						<div class="work_item">
-							<div class="work_img">
-								<img src="images/works/7.jpg" alt="" />
-								<a class="zoom" href="images/works/7.jpg" rel="prettyPhoto[portfolio1]" ></a>
-							</div>
-							<div class="work_description">
-								<div class="work_descr_cont">
-									<a href="portfolio-post.html" >Ginger Beast</a>
-									<span>17 March, 2041</span>
-								</div>
-							</div>
-						</div>
-					</div><!-- //work7 -->
-				</div><!-- //PROJECTS SLIDER -->
-			</div>
-			
+		
 			
 			<!-- OUR CLIENTS -->
 			<div class="our_clients">

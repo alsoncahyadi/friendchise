@@ -4,8 +4,47 @@
 
 @section('main')
 	<div id='franchisee'>
-		<h1> Daftar Mitra </h1>
-
+		<!-- PAGE -->
+        <div id="page" class="single_page">
+        
+            <!-- HEADER -->
+            <header>
+                
+                <!-- MENU BLOCK -->
+                <div class="menu_block">
+                
+                    <!-- CONTAINER -->
+                    <div class="container clearfix">
+                        
+                        <!-- LOGO -->
+                        <div class="logo pull-left">
+                            <a href="#" >
+                            <span class="b1">F</span>
+                            <span class="b1">R</span>
+                            <span class="b2">I</span>
+                            <span class="b2">E</span>
+                            <span class="b3">N</span>
+                            <span class="b3">D</span>
+                            <span class="b4">C</span>
+                            <span class="b4">H</span>
+                            <span class="b4">I</span>
+                            <span class="b5">S</span>
+                            <span class="b5">E</span>
+                            </a>
+                        </div><!-- //LOGO -->
+                        
+                   
+                       
+                    </div><!-- //MENU BLOCK -->
+                </div><!-- //CONTAINER -->
+            </header><!-- //HEADER -->
+            
+            
+            <!-- BLOG -->
+        <section id="blog">
+            
+            <!-- CONTAINER -->
+            <div class="container">
 		<?php if (!empty($franchiseeInput)):?>
 			<table class="table">
 				<thead>
@@ -56,20 +95,7 @@
 			<p>There are no franchisee data</p>
 		<?php endif ?>
 
-		<!--<div class="table-bottom">-->
 		<div class="table-nav">
-			<!--
-			<div class="pull-left">
-				<strong>
-					Jumlah mitra : {{$inputJumlah}}
-				</strong>
-			</div>
-			-->
-			<!--
-			<div class="pull-right">
-				Pagination
-			</div>
-			-->
 			<div class="jumlah-data">
 					<strong>
 						Jumlah mitra : {{$inputJumlah}}
@@ -87,35 +113,14 @@
 				</a>
 			</div>
 		</div>
-	</div>
+        
+        </div><!-- //CONTAINER -->
+        </section><!-- //BLOG -->
+	</div><!-- PAGE -->
+    </div>
+    
 @stop
 
 @section('footer')
-	@include('footer')
 @stop
 
-<!--
-	<ul>
-		<?php foreach ($franchiseeInput as $item): ?>
-			<li> <?= $item?></li>
-		<?php endforeach ?>
-	</ul>
--->
-
-<!--
-<!DOCTYPE html>
-<html>
-	<div id='franchisee'>
-		<h1> Franchisee </h1>
-		<?php if (!empty($franchiseeInput)):?>
-			<ul>
-				<?php foreach ($franchiseeInput as $item): ?>
-					<li> <?= $item?></li>
-				<?php endforeach ?>
-			</ul>
-		<?php else: ?>
-			<p>There are no franchisee data</p>
-		<?php endif ?>
-	</div>
-</html>
--->

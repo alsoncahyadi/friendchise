@@ -6,6 +6,8 @@
     <!-- PRELOADER -->
     <img id="preloader" src="<?php public_path() ?>/images/preloader.gif" alt="" />
     <!-- //PRELOADER -->
+    <div class="preloader_hide">
+
     <!-- <div class="preloader_hide"> -->
 
     <!-- PAGE -->
@@ -37,35 +39,8 @@
                         </a>
                     </div><!-- //LOGO -->
                     
-                    <!-- SEARCH FORM -->
-                    <div id="search-form" class="pull-right">
-                        <form method="get" action="#">
-                            <input type="text" name="Search" value="Search" onFocus="if (this.value == 'Search') this.value = '';" onBlur="if (this.value == '') this.value = 'Search';" />
-                        </form>
-                    </div><!-- SEARCH FORM -->
-                    
-                    <!-- MENU -->
-                    <!--
-                    <div class="pull-right">
-                        <nav class="navmenu center">
-                            <ul>
-                                <li class="first scroll_btn"><a href="index.html">Home</a></li>
-                                <li class="scroll_btn"><a href="index.html#about">About Us</a></li>
-                                <li class="scroll_btn"><a href="index.html#projects">Projects</a></li>
-                                <li class="scroll_btn"><a href="index.html#team">Team</a></li>
-                                <li class="scroll_btn"><a href="index.html#news">News</a></li>
-                                <li class="scroll_btn last"><a href="index.html#contacts">Contacts</a></li>
-                                <li class="sub-menu active">
-                                    <a href="javascript:void(0);">Pages</a>
-                                    <ul>
-                                        <li><a href="blog.html">Blog</a></li>
-                                        <li class="active"><a href="blog-post.html">Blog Post</a></li>
-                                        <li><a href="portfolio-post.html">Portfolio Single Work</a></li>
-                                    </ul>
-                                </li>
-                            </ul>
-                        </nav>
-                    </div>--><!-- //MENU -->
+               
+                   
                 </div><!-- //MENU BLOCK -->
             </div><!-- //CONTAINER -->
         </header><!-- //HEADER -->
@@ -221,7 +196,7 @@
     
     
 
-<!--</div> -->
+</div>
     </div>
 @stop
 
