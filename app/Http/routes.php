@@ -214,9 +214,14 @@ Route::get('testplace', function() {
 });
 
 //Place
+/*
 Route::get('place', function() {
 	return view('place');
 });
+*/
+
+//Place
+Route::get('place', 'FranchiseeController@testPlace');
 
 //Place
 Route::get('geocode', function() {

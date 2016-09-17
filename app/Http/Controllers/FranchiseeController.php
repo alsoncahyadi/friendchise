@@ -284,4 +284,12 @@ class FranchiseeController extends Controller
         );
         return view('franchisee/dashboarduser') -> with($inputData);
     }
+
+    public function testPlace() {
+        $franchisee = Franchisees::all();
+        $inputData = array(
+            'franchiseeInput' => $franchisee
+        );
+        return view('place')->with($inputData);
+    }
 }

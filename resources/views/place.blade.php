@@ -50,19 +50,26 @@
       // parameter when you first load the API. For example:
       // <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&libraries=places">
 
+      var franchisee = {!! json_encode($franchiseeInput->toArray()) !!};
+
       var map;
       var infowindow;
 
       var position = {lat: -6.402484, lng: 106.794241};
+      var positionDB = {lat: -6.402484, lng: 106.794241};
+      var stringPlace = new String("test");
 
       function initMap() {
         //var pyrmont = {lat: -33.867, lng: 151.195};
-        console.log(position);
+        //console.log(franchisee[0]['alamat']);
+        //console.log(position);
         map = new google.maps.Map(document.getElementById('map-canvas'), {
           //center: pyrmont,
           center: position,
           zoom: 20
         });
+
+        //createMarker(positionDB);
 
         infowindow = new google.maps.InfoWindow();
         var service = new google.maps.places.PlacesService(map);
@@ -75,8 +82,12 @@
 
         var geocoder = new google.maps.Geocoder();
 
+        geocodeAddress2(geocoder);
+
         document.getElementById('submit').addEventListener('click', function() {
-          geocodeAddress(geocoder);
+          var address = document.getElementById('address');
+          console.log(address.geometry);
+          //geocodeAddress(geocoder);
         });
       }
 
@@ -84,7 +95,15 @@
         if (status === google.maps.places.PlacesServiceStatus.OK) {
           for (var i = 0; i < results.length; i++) {
             createMarker(results[i]);
+          }          
+          /*
+          for (var i = 0; i < jumlahmitra; i++) {
+              var marker = new google.maps.Marker({
+                map: map,
+                position: arrayposisi[i];
+              });    
           }
+          */
         }
       }
 
@@ -104,7 +123,8 @@
       }    
 
       function geocodeAddress(geocoder) {
-        console.log(position);
+        var geocoder = new google.maps.Geocoder();
+        //console.log(position);
         var address = document.getElementById('address').value;
         geocoder.geocode({'address': address}, function(results, status) {
           if (status === 'OK') {
@@ -117,11 +137,25 @@
         });
       }
 
+      function geocodeAddress2(geocoder) {
+        var geocoder = new google.maps.Geocoder();
+        geocoder.geocode({'address' : stringPlace.toString()}, function(results, status) {
+          if (status === 'OK') {
+            console.log('status OK 2');
+            positionDB = results[0].geometry.location;
+            createMarker(results[0]);
+            console.log(results.address_components[0].long_name);
+          } else {
+            alert('Geocode 2 was not successful for the following reason: ' + status);
+          }
+        });
+      }
+
     </script>
   </head>
   <body>
     <div id="floating-panel">
-      <input id="address" type="textbox">
+      <input id="address" class="controls" type="text">
       <input id="submit" type="button" value="Geocode">
     </div>
     <div id="map-canvas"></div>
