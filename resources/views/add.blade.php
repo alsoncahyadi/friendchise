@@ -1,4 +1,4 @@
-<style>
+  <style>
   #map-canvas{
     width: 350px;
     height: 250px;

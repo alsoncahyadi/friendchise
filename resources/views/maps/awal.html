@@ -1,0 +1,34 @@
+<!-- Buat google maps-->
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+			<title> Coba Google Map API</title>
+
+			<style>
+				#map-canvas {
+					width: 250px;
+					height: 250px;
+				}
+			</style>
+	</head>	
+	<body>
+		<div id="map-canvas">
+			
+		</div>
+
+		<!--map api dan keynya-->
+		<script type="https://maps.googleapis.com/maps/api/js?key=AIzaSyDTmO8q9MI6fO7uu5h6ivYYwEus3HkXy4M"></script>
+
+		<script>
+			var map = new.google.maps.Map(document.getElementById('map-canvas'), {
+				center:{
+					lat:20.0,
+					lng:20.0,
+				},
+				zoom: 10
+			});
+		</script>
+	</body>
+ </html>

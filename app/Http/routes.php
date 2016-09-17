@@ -12,7 +12,7 @@
 */
 
 //Route yang manggil view welcome.blade.php
-Route::get('/', 'PagesController@homepage');;
+Route::get('/', 'PagesController@homepage');
 /*
 Route::get('/', function () {
     //return view('welcome');
@@ -20,12 +20,24 @@ Route::get('/', function () {
 });
 */
 
-Route::get('add', function() {
+//Test google map api
+Route::get('awal', function() {
+	return view('maps/awal.html');
+}); 
+
+
+//Tutorial blade nepal laravel google map api
+
+Route::get('vendor/add', function() {
 	return view('add');
 });
 
-Route::get('vendor', function() {
+Route::post('vendor/add', function() {
 	return view('vendor');
+});
+
+Route::get('vendor/{id}', function($id) {
+
 });
 
 /*

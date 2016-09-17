@@ -24,5 +24,8 @@ class VerifyCsrfToken extends BaseVerifier
         'schedule/login',
         'schedule/{schedule}/update',
         'schedule/{schedule}/edit',
+
+        'vendor/add',
+        'vendor/vendor'
     ];
 }
