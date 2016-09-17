@@ -1222,7 +1222,7 @@ input[type="color"]:focus {
 .mitra_btn {
 	display:inline-block;
 	cursor:pointer;
-	margin: 0 3px 5px 0;
+	margin: 2px 2px 2px 2px;
 	padding:9px 20px;
 	border: 2px solid #242424;
 	border-radius: 0;
@@ -1238,7 +1238,7 @@ input[type="color"]:focus {
 	background: none; 
 	transition: all 0.3s ease-in-out;
 	-webkit-transition: all 0.3s ease-in-out;
-	width: 100px;
+	width: 110px;
 	text-align:center;
 }
 .mitra_btn.active, .mitra_btn:hover {background: none; color:#77500F; border-color:#77500F;}

@@ -22,7 +22,7 @@
                         
                         <!-- LOGO -->
                         <div class="logo pull-left">
-                            <a href="#" >
+                            <a href="/" >
                             <span class="b1">F</span>
                             <span class="b1">R</span>
                             <span class="b2">I</span>
@@ -73,41 +73,30 @@
 				<tbody>
 					<?php foreach ($franchiseeInput as $item) : ?>
 						<tr>
-							<td> {{$item->nama}} </td>
-							<td> {{$item->alamat}} </td>
-							<td> {{$item->kecamatan}} </td>
-							<td> {{$item->kota}} </td>
-							<td> {{$item->username}} </td>
-							<td> {{$item->password}} </td>
-							<td> {{$item->jualtahu}} </td>
-							<td> {{$item->stoktahu}} </td>
-                            </tr>
-                            <tr>
-                            <td colspan="3">
-                            </td>
-                            <td>
-								<div class="box-button">
+							<td> {{$item->nama}} <br /><br /> <div class="box-button">
 									{{ link_to('franchisee/'.$item->id, 'Detail', ['class'=>'mitra_btn']) }} 	
 								</div>
-                                </td>
-                                <td colspan="1">
-								<div class="box-button">
+                                 <div class="box-button">
 									{{ link_to('franchisee/'.$item->id . '/edit', 'Ubah', ['class'=>'mitra_btn']) }} 
-								</div>
-                                </td>
-                                <td colspan="3">
-								<div class="box-button">
+								</div> 
+                                <div class="box-button">
 									{!! Form::open(['method' => 'DELETE', 'action' => ['FranchiseeController@delete', $item->id] ]) !!}
 
 									{!! Form::submit('Hapus', ['class' => 'mitra_btn']) !!}
 
 									{!! Form::close() !!}
 
-								</div>	
+								</div>
                                 </td>
-                            </td>			
-                         </tr>
-					<?php endforeach ?>
+							<td> {{$item->alamat}}  </td>
+							<td> {{$item->kecamatan}} 	</td>
+							<td> {{$item->kota}} </td>
+							<td> {{$item->username}} </td>
+							<td> {{$item->password}} </td>
+							<td> {{$item->jualtahu}} </td>
+							<td> {{$item->stoktahu}} </td>
+                            </tr>					
+							<?php endforeach ?>
 				</tbody>
 			</table>
 		<?php else: ?>
@@ -153,11 +142,14 @@
         </section><!-- //BLOG -->
 	</div><!-- PAGE -->
     
+    
   
     </div>
-    </div>
+    </div><!-- CONTACTS -->
+    <section id="contacts">
+    </section><!-- //CONTACTS -->
 @stop
 
 @section('footer')
+	@include('footer')
 @stop
-
