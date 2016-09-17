@@ -40,7 +40,7 @@
 					
 					<!-- LOGIN FORM -->
 					<div id="login-form" class="pull-right">
-						<form method="POST" action="{{ url('login') }}">
+						<form method="get" action="#">
 							<input type="text" name="username" value="Username" onFocus="if (this.value == 'Username') this.value = '';" onBlur="if (this.value == '') this.value = 'Username';" />
 							<input type="password" name="password" value="password" onFocus="if (this.value == 'password') this.value = '';" onBlur="if (this.value == '') this.value = 'password';" />
 							<input type="submit" style="position: absolute; left: -9999px; width: 1px; height: 1px;" tabindex="-1" />
@@ -153,7 +153,7 @@
 							<h2>Mari Bergabung di <b>FriendChise</b></h2>
 							<p>Dengan fitur Real-Time Monitoring dan Rekomendasi Tempat Strategis dari sistem, UKM anda akan terpacu untuk berkembang lebih pesat.</p>
 							<p>Tunggu apalagi, segera daftarkan akun anda!</p>
-							<a class="btn btn-active" href="franchisee/create" ><span data-hover="Ya, Saya Mau">Bergabung</span></a>
+							<a class="btn btn-active" href="franchisee/create" ><span data-hover="Ya Saya Mau">Bergabung</span></a>
 						</div>
 						
 						<div class="col-lg-5 col-md-5 col-sm-5 ipad_img_in" data-appear-top-offset="-200" data-animated="fadeInRight">
