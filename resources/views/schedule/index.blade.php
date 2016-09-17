@@ -49,7 +49,7 @@
               <!-- BREADCRUMBS -->
         <section class="breadcrumbs_block clearfix parallax margbot50">
             <div class="container center">
-                    <h2><b>Dashboard</b> Pusat </h2>
+                    <h2><b>DASHBOARD</b> PUSAT</h2>
             </div>
         </section><!-- //BREADCRUMBS -->
             <!-- CONTAINER -->
@@ -67,23 +67,13 @@
                             <tbody>
                                 <?php foreach ($scheduleInput as $item) : ?>
                                     <tr>
-                                        <td> {{$item->nama}} </td>
-                                        <td> {{$item->tanggal}} </td>
-                                        <td> {{$item->jumlahkirim}} </td>
-                                      </tr>
-                                     <tr>
-                                        
-                                        <td> 
-                                            <div class="box-button">
+                                        <td> {{$item->nama}} <br /><br />
+                            	            <div class="box-button">
                                                 {{ link_to('franchiser/1/show/schedule/' . $item->id, 'Detail', ['class'=>'mitra_btn']) }} 	
                                             </div>
-                                            </td>
-                                            <td>
                                             <div class="box-button">
                                                 {{ link_to('franchiser/1/edit/schedule/'.$item->id, 'Ubah', ['class'=>'mitra_btn']) }} 
                                             </div>
-                                            </td>
-                                            <td>
                                             <div class="box-button">
                                                 {!! Form::open(['method' => 'DELETE', 'action' => ['ScheduleController@delete', $item->id] ]) !!}
             
@@ -93,7 +83,10 @@
             
                                             </div>
                                             </td>
-                                    </tr>
+                                        <td> {{$item->tanggal}} </td>
+                                        <td> {{$item->jumlahkirim}} </td>
+                                      </tr>
+                                     
                                 <?php endforeach ?>
                             </tbody>
                         </table>

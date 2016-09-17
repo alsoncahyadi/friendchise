@@ -49,7 +49,7 @@
               <!-- BREADCRUMBS -->
         <section class="breadcrumbs_block clearfix parallax margbot50">
             <div class="container center">
-                <h2><b>Dashboard</b> Pusat</h2>
+                <h2><b>DASHBOARD</b> PUSAT</h2>
             </div>
         </section><!-- //BREADCRUMBS -->
             <!-- CONTAINER -->
