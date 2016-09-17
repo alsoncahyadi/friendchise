@@ -23,7 +23,7 @@
 					
 					<!-- LOGO -->
 					<div class="logo pull-left">
-						<a href="#" >
+						<a href="http://friendchise.com" >
 						<span class="b1">F</span>
 						<span class="b1">R</span>
 						<span class="b2">I</span>
