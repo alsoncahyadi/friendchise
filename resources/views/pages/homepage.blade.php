@@ -153,7 +153,7 @@
 							<h2>Mari Bergabung di <b>FriendChise</b></h2>
 							<p>Dengan fitur Real-Time Monitoring dan Rekomendasi Tempat Strategis dari sistem, UKM anda akan terpacu untuk berkembang lebih pesat.</p>
 							<p>Tunggu apalagi, segera daftarkan akun anda!</p>
-							<a class="btn btn-active" href="franchiser/1/create/franchisee" ><span data-hover="Ya Saya Mau">Bergabung</span></a>
+							<a class="btn btn-active" href="#contacts" class="scroll_btn last" ><span data-hover="Hubungi Kami!">Ingin Bergabung?</span></a>
 						</div>
 						
 						<div class="col-lg-5 col-md-5 col-sm-5 ipad_img_in" data-appear-top-offset="-200" data-animated="fadeInRight">
