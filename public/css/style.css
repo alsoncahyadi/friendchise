@@ -754,7 +754,7 @@ ul.project_info li span {color:#979797;}
 .crewman_item .crewman_descr .crewman_descr_cont {
 	position:absolute;
 	left:0;
-	top:50%;
+	top:25%;
 	width:100%;
 	opacity:0;
 	transform:translateY(-100%);
