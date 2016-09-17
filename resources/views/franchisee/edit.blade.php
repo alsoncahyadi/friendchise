@@ -2,7 +2,56 @@
 
 @section('main')
     <div id='franchisee'>
-        <h2> Edit Franchisee </h2>
+    <!-- PRELOADER -->
+    <img id="preloader" src="<?php public_path() ?>/images/preloader.gif" alt="" />
+    <!-- //PRELOADER -->
+    <div class="preloader_hide">
+		<!-- PAGE -->
+        <div id="page" class="single_page">
+        
+            <!-- HEADER -->
+            <header>
+                
+                <!-- MENU BLOCK -->
+                <div class="menu_block">
+                
+                    <!-- CONTAINER -->
+                    <div class="container clearfix">
+                        
+                        <!-- LOGO -->
+                        <div class="logo pull-left">
+                            <a href="#" >
+                            <span class="b1">F</span>
+                            <span class="b1">R</span>
+                            <span class="b2">I</span>
+                            <span class="b2">E</span>
+                            <span class="b3">N</span>
+                            <span class="b3">D</span>
+                            <span class="b4">C</span>
+                            <span class="b4">H</span>
+                            <span class="b4">I</span>
+                            <span class="b5">S</span>
+                            <span class="b5">E</span>
+                            </a>
+                        </div><!-- //LOGO -->
+                        
+                   
+                       
+                    </div><!-- //MENU BLOCK -->
+                </div><!-- //CONTAINER -->
+            </header><!-- //HEADER -->
+            
+            
+            <!-- BLOG -->
+        <section id="blog">
+              <!-- BREADCRUMBS -->
+        <section class="breadcrumbs_block clearfix parallax margbot50">
+            <div class="container center">
+                <h2>Edit <b>{{ $franchiseeInput->nama }}</b></h2>
+            </div>
+        </section><!-- //BREADCRUMBS -->
+            <!-- CONTAINER -->
+            <div class="container margbot80">
         <!--    POST artinya buat ngirim data dari user dan simpan 
                 url franchisee artinya di laravelapp.dev/franchisee -->
         
@@ -87,9 +136,13 @@
             -->
 
         {!! Form::close() !!}
+        </div><!-- //CONTAINER -->
+        </section><!-- //BLOG -->
+	</div><!-- PAGE -->
+	</div>
+    </div>
     </div>
 @stop
 
 @section('footer')
-    @include('footer')
 @stop
