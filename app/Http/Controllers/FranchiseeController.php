@@ -63,13 +63,13 @@ class FranchiseeController extends Controller
     public function update($id, Request $req) {
         $franchisee = Franchisees::findOrFail($id);
         $franchisee->update($req->all());
-        return redirect('franchisee');
+        return redirect('franchiser/1/list/franchisee');
     }
 
     public function delete($id) {
         $franchisee = Franchisees::findOrFail($id);
         $franchisee->delete();
-        return redirect('franchisee');
+        return redirect('franchiser/1/list/franchisee');
     }
 
     //Variabel request yang dimaksud adalah class Ill\Http\Request yang diimport
@@ -90,7 +90,7 @@ class FranchiseeController extends Controller
         $input['stoktahu'] = 100;
 
         Franchisees::create($input);
-        return redirect('franchisee');
+        return redirect('franchiser/1/list/franchisee');
 
 
         /*
@@ -197,7 +197,7 @@ class FranchiseeController extends Controller
         //Cek apakah yg login pusat
         if ($input['username'] == 'tahujeletot') {
             if ($input['password'] == 'jeletottahu') {
-                return redirect('franchiser/list/franchisee');
+                return redirect('franchiser/1/list/franchisee');
             }
         }
         //Jika bkn pusat, cek mitra

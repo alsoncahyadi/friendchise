@@ -39,13 +39,13 @@ class ScheduleController extends Controller
     public function update($id, Request $req) {
         $schedule = Schedule::findOrFail($id);
         $schedule->update($req->all());
-        return redirect('schedule');
+        return redirect('franchiser/1/list/schedule');
     }
 
     public function delete($id) {
         $schedules = Schedule::findOrFail($id);
         $schedules->delete();
-        return redirect('schedule');
+        return redirect('franchiser/1/list/schedule');
     }
 
     //Variabel request yang dimaksud adalah class Ill\Http\Request yang diimport
@@ -53,7 +53,7 @@ class ScheduleController extends Controller
         //Ambil semua data request ke input
         $input = $req->all();
         Schedule::create($input);
-        return redirect('schedule');
+        return redirect('franchiser/1/list/schedule');
     }
 
     //Variabel untuk nangkep detail

@@ -74,10 +74,10 @@
 					<?php foreach ($franchiseeInput as $item) : ?>
 						<tr>
 							<td> {{$item->nama}} <br /><br /> <div class="box-button">
-									{{ link_to('franchisee/'.$item->id, 'Detail', ['class'=>'mitra_btn']) }} 	
+									{{ link_to('franchiser/1/show/franchisee/'.$item->id, 'Detail', ['class'=>'mitra_btn']) }} 	
 								</div>
                                  <div class="box-button">
-									{{ link_to('franchisee/'.$item->id . '/edit', 'Ubah', ['class'=>'mitra_btn']) }} 
+									{{ link_to('franchiser/1/edit/franchisee/'.$item->id, 'Ubah', ['class'=>'mitra_btn']) }} 
 								</div> 
                                 <div class="box-button">
 									{!! Form::open(['method' => 'DELETE', 'action' => ['FranchiseeController@delete', $item->id] ]) !!}
@@ -118,9 +118,7 @@
 			<div class="row">
                 <div class="col-lg-5 col-md-5"></div>
                 <div class="col-lg-4 col-md-4">
-                    <a href="franchisee/create" class="contact_btn">
-                        Tambah Mitra
-                    </a>
+                    {{ link_to('franchiser/1/create/franchisee', 'Tambah Mitra', ['class'=>'contact_btn']) }}
                 </div>
                 <div class="col-lg-3 col-md-3"></div>
 			</div>
