@@ -44,7 +44,7 @@
 								<li ><a href="/franchiser/1/list/franchisee" >Daftar Mitra</a></li>
 								<li><a href="/franchiser/1/list/schedule" >Daftar Penjadwalan</a></li>
                                 <li ><a href="/franchiser/1/rekomendasitempat" >Rekomendasi Tempat</a></li>
-								
+								<li ><a href="/" >Log Out</a></li>
 							</ul>
 						</nav>
 					</div><!-- //MENU -->

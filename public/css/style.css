@@ -1818,6 +1818,10 @@ input[type="color"]:focus {
 }
 
 @media (max-width: 767px) {
+	.navmenu {
+		display : none;	
+	}
+	
 	#login-form {
 		display : none;	
 	}
@@ -1959,7 +1963,10 @@ input[type="color"]:focus {
 }
 
 @media (max-width: 479px) {
-
+	.navmenu {
+		display : none;	
+	}
+	
 	#search-form {display:none;}
 	
 	#login-form {display:none;}

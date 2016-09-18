@@ -36,6 +36,16 @@
 						<span class="b5">E</span>
 						</a>
 					</div><!-- //LOGO -->
+                    
+                     <!-- MENU -->
+					<div class="pull-right">
+						<nav class="navmenu center">
+							<ul>
+								<li ><a href="/" >Log Out</a></li>
+								
+							</ul>
+						</nav>
+					</div><!-- //MENU -->
 					
 					<!-- MENU -->
 					<!--
