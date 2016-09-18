@@ -287,7 +287,7 @@
                             <div class="col-lg-3">
                             	<br />
                                 <br />
-                                <form> 
+                                <form style="margin: 20px"> 
                                      <div class ="checkbox">
                                         <input type="checkbox" value="school" name="optradio" onClick="radio_check()">Sekolah</label>
                                       </div>
