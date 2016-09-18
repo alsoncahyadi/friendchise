@@ -16,10 +16,13 @@ class ScheduleController extends Controller
         //$scheduleList = Schedule::all()->sort('tanggal');
         $scheduleList = Schedule::orderBy('tanggal', 'asc') -> paginate(5);
 
+        $franchisee = Franchisees::all();
+
         $jumlahSiswa = $scheduleList -> count();
         $inputData = array (
             'scheduleInput' => $scheduleList,
-            'inputJumlah' => $jumlahSiswa
+            'inputJumlah' => $jumlahSiswa,
+            'franchiseeInput' => $franchisee
         );
         return view('schedule/index') -> with($inputData);
     }
@@ -30,7 +33,12 @@ class ScheduleController extends Controller
 
         $franchiseeList = array();
         for ($i=0; $i<$jumlahSiswa; $i++) {
-            array_push($franchiseeList, $franchisee[$i]['nama']);
+            /*
+            array_push($franchiseeList, $franchisee[$i]['nama'] => $franchisee[$i]['nama']
+
+            );
+            */
+            $franchiseeList[$franchisee[$i]['nama']] = $franchisee[$i]['nama'];
         }
         $inputData = array(
             'franchiseeInput' => $franchiseeList
@@ -63,7 +71,10 @@ class ScheduleController extends Controller
     //Variabel request yang dimaksud adalah class Ill\Http\Request yang diimport
     public function store(Request $req) {
         //Ambil semua data request ke input
+        //echo $req['id'];
         $input = $req->all();
+        echo $req['nama']+1;
+        //$input['nama'] = Franchisees::findOrFail($req['nama']+1)['nama'];
         Schedule::create($input);
         return redirect('franchiser/1/list/schedule');
     }
