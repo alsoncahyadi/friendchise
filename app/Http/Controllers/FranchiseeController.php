@@ -35,7 +35,7 @@ class FranchiseeController extends Controller
             $item['jualtahu'] = $unpackserialize['18-09-2016'];
         }
 
-        $jumlahSiswa = $franchiseeList -> count();
+        $jumlahSiswa = Franchisees::all()->count();
         $inputData = array (
             'franchiseeInput' => $franchiseeList,
             'inputJumlah' => $jumlahSiswa
