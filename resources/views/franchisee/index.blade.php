@@ -120,9 +120,11 @@
 						Jumlah mitra : {{$inputJumlah}}
 					</h3>	
 				</div>
-			<div class="paging">
+                <div class="row">
+			<div class="pagination">
 				{{ $franchiseeInput->links() }}
 			</div>
+            </div>
 		</div>
 
 		<div class="tombol-nav margbot30">

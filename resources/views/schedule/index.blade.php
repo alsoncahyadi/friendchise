@@ -111,8 +111,9 @@
                                     
                                 </strong>	
                             </div>
-                        <div class="paging">
-                            
+                            <div class ="row">
+                        <div class="pagination">
+                        </div>
                         </div>
                     </div>
             
