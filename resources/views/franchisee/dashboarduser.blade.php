@@ -68,6 +68,7 @@
 		<section class="breadcrumbs_block clearfix parallax">
 			<div class="container center">
 				<h2><b>DASHBOARD</b> MITRA</h2>
+                <p style="font-style:italic; color:#fff"><strong>"Welcome <?php echo $franchiseeInput->nama ?>!"</strong></p>
 			</div>
 		</section><!-- //BREADCRUMBS -->
 		
@@ -80,10 +81,10 @@
 				<!-- ROW -->
 				<div class="row">
 				
+						
 					<!-- BLOG BLOCK -->
 					<div class="col-lg-2 col-md-2"></div>
 					<div class="blog_block col-lg-8 col-md-8 padbot50">
-						
 						<!-- SINGLE BLOG POST -->
 							{!! Form::model ($franchiseeInput, ['method' => 'PATCH', 'action' => ['FranchiseeController@updatePenjualan', $franchiseeInput->id]]) !!}
                             
