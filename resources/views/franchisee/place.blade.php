@@ -70,7 +70,7 @@
         map = new google.maps.Map(document.getElementById('map-canvas'), {
           //center: pyrmont,
           center: position,
-          zoom: 20
+          zoom: 10
         });
 
         //createMarker(positionDB);
