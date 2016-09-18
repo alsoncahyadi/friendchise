@@ -1,7 +1,7 @@
 <style>
   #map-canvas{
-    width: 75%;
-    height: 75%;
+    width: 100%;
+    height: 100%;	
   }
 </style>
 
@@ -19,7 +19,7 @@
       #floating-panel {
         position:absolute;
         top: 40px;
-        left: 25%;
+        left: 80%;
         z-index: 5;
         background-color: rgba(249,249,249,0.40);
         padding: 8px 8px;
@@ -60,6 +60,8 @@
       var position = {lat: -6.402484, lng: 106.794241};
       var positionDB = {lat: -6.402484, lng: 106.794241};
       var stringPlace = new String("test");
+	  
+	  var arrayType = [];
 
       function initMap() {
         //var pyrmont = {lat: -33.867, lng: 151.195};
@@ -75,45 +77,23 @@
 
         infowindow = new google.maps.InfoWindow();
         var service = new google.maps.places.PlacesService(map);
-
-        service.nearbySearch({
-          //location: pyrmont,
-          location: position,
-          radius: 3000,
-          type: ['school']
-        }, callback);
-
-        service.nearbySearch({
-          location: position,
-          radius: 3000,
-          type: ['hospital']
-        }, callback);
-
-        service.nearbySearch({
-          location: position,
-          radius: 3000,
-          type: ['bus_station']
-        }, callback);
-
-        service.nearbySearch({
-          location: position,
-          radius: 3000,
-          type: ['gas_station']
-        }, callback);
-
-        service.nearbySearch({
-          location: position,
-          radius: 3000,
-          type: ['train_station']
-        }, callback);
-
+		
+		for (var i=0; i<arrayType.length;i++) {
+			service.nearbySearch({
+          	location: position,
+          	radius: 3000,
+          	type: [arrayType[i].value.toString()],
+        	}, callback);			
+			console.log(arrayType[i].value.toString());
+		}
+		
         var geocoder = new google.maps.Geocoder();
 
-        geocodeAddress2(geocoder);
+        //geocodeAddress2(geocoder);
 
         document.getElementById('submit').addEventListener('click', function() {
           var address = document.getElementById('address');
-          console.log(address.geometry);
+          //console.log(address.geometry);
           geocodeAddress(geocoder);
         });
       }
@@ -136,6 +116,8 @@
 
       function createMarker(place) {
         var placeLoc = place.geometry.location;
+		//console.log(place.result[0].address_component.long_name);
+		//console.log(place.type);
         var image = 'https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png';
         var marker = new google.maps.Marker({
           map: map,
@@ -262,6 +244,17 @@
                         </a>
                     </div><!-- //LOGO -->
                     
+                    <!-- MENU -->
+					<div class="pull-right">
+						<nav class="navmenu center">
+							<ul>
+								<li ><a href="/franchiser/1/list/franchisee" >Daftar Mitra</a></li>
+								<li><a href="/franchiser/1/list/schedule" >Daftar Penjadwalan</a></li>
+                                <li ><a href="/franchiser/1/rekomendasitempat" >Rekomendasi Tempat</a></li>
+								
+							</ul>
+						</nav>
+					</div><!-- //MENU -->
                     
                 </div><!-- //MENU BLOCK -->
             </div><!-- //CONTAINER -->
@@ -278,7 +271,7 @@
          <!-- CONTAINER -->
             <div class="container">
                     <div class="row">
-                            <div class="col-lg-12">
+                            <div class="col-lg-9">
                             
                             <br /> <br />
                             <div id="floating-panel">
@@ -291,7 +284,53 @@
                           
                             </div>
                             </div>
+                            <div class="col-lg-3">
+                            	<br />
+                                <br />
+                                <form> 
+                                     <div class ="checkbox">
+                                        <input type="checkbox" value="school" name="optradio" onClick="radio_check()">Sekolah</label>
+                                      </div>
+                                       <div class ="checkbox">
+                                        <input type="checkbox" value="hospital" name="optradio" onClick="radio_check()">Rumah Sakit</label>
+                                        </div>
+                                         <div class ="checkbox">
+                                        <input type="checkbox" value="bus_station" name="optradio" onClick="radio_check()">Terminal Bis</label>
+                                        </div>
+                                         <div class ="checkbox">
+                                        <input type="checkbox" value="gas_station" name="optradio" onClick="radio_check()">Pom Bensin</label> 
+                                        </div>
+                                        <div class ="checkbox">
+                                        <input type="checkbox" value="train_station" name="optradio" onClick="radio_check()">Stasiun Kereta</label>
+                                        </div>
+                                  </form>
+                                  <script>
+								  		function radio_check() {
+											var radios = document.getElementsByName('optradio');
+	
+											for (var i = 0, length = radios.length; i < length; i++) {
+												if (radios[i].checked) {
+													if (arrayType.indexOf(radios[i], 0)==-1) {
+														arrayType.push(radios[i]);	
+													}
+														
+													// do whatever you want with the checked radio
+													//console.log(radios[i].value);
+											
+													// only one radio can be logically checked, don't check the rest
+													break;
+												}
+												else{
+														if (arrayType.indexOf(radios[i], 0)!=-1) {
+															arrayType.pop(radios[i]);
+														}
+												}
+											}
+										}
+								</script>
+                                     </div>
                      </div>
+                     
     	</div><!-- //CONTAINER -->
         </section><!-- //BLOG -->
     </div><!-- //PAGE -->
@@ -301,6 +340,8 @@
     </section><!-- //CONTACTS -->
     
     </div>	
+    
+    
     
     
     	<script src="<?php echo asset('js/jquery_2_2_1.min.js')?>"></script>

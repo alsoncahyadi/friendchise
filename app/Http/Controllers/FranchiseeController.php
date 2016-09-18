@@ -299,10 +299,10 @@ class FranchiseeController extends Controller
         return view('place')->with($inputData);
     }
 
-    public function recommendation($id) {
+    public function recommendation() {
         $franchisee = Franchisees::all();
         $inputData = array(
-            'idInput' => $id,
+            'idInput' => 1,
             'franchiseeInput' => $franchisee
         );
         return view('franchisee/place')->with($inputData);

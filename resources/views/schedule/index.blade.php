@@ -37,7 +37,17 @@
                             </a>
                         </div><!-- //LOGO -->
                         
-                   
+                   		<!-- MENU -->
+					<div class="pull-right">
+						<nav class="navmenu center">
+							<ul>
+								<li ><a href="/franchiser/1/list/franchisee" >Daftar Mitra</a></li>
+								<li><a href="/franchiser/1/list/schedule" >Daftar Penjadwalan</a></li>
+                                <li ><a href="/franchiser/1/rekomendasitempat" >Rekomendasi Tempat</a></li>
+								
+							</ul>
+						</nav>
+					</div><!-- //MENU -->
                        
                     </div><!-- //MENU BLOCK -->
                 </div><!-- //CONTAINER -->

@@ -27,6 +27,9 @@ Route::post('schedule', 'ScheduleController@store');
 Route::get('franchiser/1/edit/franchisee/{franchisee}', 'FranchiseeController@edit');
 Route::get('franchiser/1/edit/schedule/{schedule}', 'ScheduleController@edit');
 
+//MAPS
+Route::get('franchiser/1/rekomendasitempat', 'FranchiseeController@recommendation');
+
 //Mengedit mitra dan schedule (patch)
 Route::patch('franchisee/{franchisee}', 'FranchiseeController@update');
 Route::patch('schedule/{schedule}', 'ScheduleController@update');
@@ -43,7 +46,5 @@ Route::get('franchisee/{franchisee}', ['uses' =>'FranchiseeController@userdashbo
 Route::patch('franchisee/{franchisee}/updatepenjualan', 'FranchiseeController@updatePenjualan');
 Route::patch('franchisee/{franchisee}/updatestok', 'FranchiseeController@updateStok');
 
-//MAPS
-Route::get('franchisee/{franchisee}/rekomendasitempat', 'FranchiseeController@recommendation');
 
 ?>
