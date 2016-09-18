@@ -8,6 +8,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <title> FriendChise </title>
+        <link rel="shortcut icon" type="ico" href="<?php public_path()?>/images/favicon.ico"/>
 
         <!--<link href="{{ asset('bootstrap_3_3_6/css/bootstrap.min.css') }}" rel="stylesheet">
         <link href="{{ asset('css/style.css') }}" rel="stylesheet">-->

@@ -289,19 +289,19 @@
                                 <br />
                                 <form style="margin: 20px"> 
                                      <div class ="checkbox">
-                                        <input type="checkbox" value="school" name="optradio" onClick="radio_check()">Sekolah</label>
+                                        <input type="checkbox" value="school" name="optradio" onClick="radio_check()">Sekolah</input>
                                       </div>
                                        <div class ="checkbox">
-                                        <input type="checkbox" value="hospital" name="optradio" onClick="radio_check()">Rumah Sakit</label>
+                                        <input type="checkbox" value="hospital" name="optradio" onClick="radio_check()">Rumah Sakit</input>
                                         </div>
                                          <div class ="checkbox">
-                                        <input type="checkbox" value="bus_station" name="optradio" onClick="radio_check()">Terminal Bis</label>
+                                        <input type="checkbox" value="bus_station" name="optradio" onClick="radio_check()">Terminal Bis</input>
                                         </div>
                                          <div class ="checkbox">
-                                        <input type="checkbox" value="gas_station" name="optradio" onClick="radio_check()">Pom Bensin</label> 
+                                        <input type="checkbox" value="gas_station" name="optradio" onClick="radio_check()">Pom Bensin</input> 
                                         </div>
                                         <div class ="checkbox">
-                                        <input type="checkbox" value="train_station" name="optradio" onClick="radio_check()">Stasiun Kereta</label>
+                                        <input type="checkbox" value="train_station" name="optradio" onClick="radio_check()">Stasiun Kereta</input>
                                         </div>
                                   </form>
                                   <script>
